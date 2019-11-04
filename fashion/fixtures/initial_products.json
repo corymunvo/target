@@ -1,0 +1,122 @@
+[
+  {
+    "model": "fashion.Product",
+    "pk": 1,
+    "fields": {
+      "label": "Gray Shoes",
+      "image_url": "fashion/images/prod_2.png",
+      "price": 20.0,
+      "stars": 0
+    }
+  },
+  {
+    "model": "fashion.Product",
+    "pk": 2,
+    "fields": {
+      "label": "Blue Shoe High Heels",
+      "image_url": "fashion/images/prod_3.png",
+      "price": 28.0,
+      "stars": 0
+    }
+  },
+  {
+    "model": "fashion.Product",
+    "pk": 3,
+    "fields": {
+      "label": "Denim Jacket",
+      "image_url": "fashion/images/model_5.png",
+      "price": 28.0,
+      "stars": 5
+    }
+  },
+  {
+    "model": "fashion.Product",
+    "pk": 4,
+    "fields": {
+      "label": "Leather Green Bag",
+      "image_url": "fashion/images/prod_1.png",
+      "price": 28.0,
+      "stars": 5
+    }
+  },
+  {
+    "model": "fashion.Product",
+    "pk": 5,
+    "fields": {
+      "label": "Smooth Cloth",
+      "image_url": "fashion/images/model_1.png",
+      "price": 28.0,
+      "stars": 0
+    }
+  },
+  {
+    "model": "fashion.Product",
+    "pk": 6,
+    "fields": {
+      "label": "Yellow Jacket",
+      "image_url": "fashion/images/model_7.png",
+      "price": 58.0,
+      "stars": 4
+    }
+  },
+  {
+    "model": "fashion.Product",
+    "pk": 7,
+    "fields": {
+      "label": "Gray Shoes",
+      "image_url": "fashion/images/prod_2.png",
+      "price": 20.0,
+      "stars": 0
+    }
+  },
+  {
+    "model": "fashion.Product",
+    "pk": 8,
+    "fields": {
+      "label": "Blue Shoe High Heels",
+      "image_url": "fashion/images/prod_3.png",
+      "price": 28.0,
+      "stars": 0
+    }
+  },
+  {
+    "model": "fashion.Product",
+    "pk": 9,
+    "fields": {
+      "label": "Denim Jacket",
+      "image_url": "fashion/images/model_5.png",
+      "price": 28.0,
+      "stars": 5
+    }
+  },
+  {
+    "model": "fashion.Product",
+    "pk": 10,
+    "fields": {
+      "label": "Leather Green Bag",
+      "image_url": "fashion/images/prod_1.png",
+      "price": 28.0,
+      "stars": 5
+    }
+  },
+  {
+    "model": "fashion.Product",
+    "pk": 11,
+    "fields": {
+      "label": "Smooth Cloth",
+      "image_url": "fashion/images/model_1.png",
+      "price": 28.0,
+      "stars": 0
+    }
+  },
+  {
+    "model": "fashion.Product",
+    "pk": 12,
+    "fields": {
+      "label": "Yellow Jacket",
+      "image_url": "fashion/images/model_7.png",
+      "price": 58.0,
+      "stars": 4
+    }
+  }
+]

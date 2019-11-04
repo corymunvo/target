@@ -1,0 +1,246 @@
+{% extends 'fashion/base.html' %} {% load static %} {% block content %}{% load countries %}
+      
+    <div class="bg-light py-3">
+        <div class="container">
+          <div class="row">
+              <div class="col-md-12 mb-0"><a href="index.html">Home</a> <span class="mx-2 mb-0">/</span> <a
+                href="cart.html">Cart</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Checkout</strong></div>          </div>
+        </div>
+      </div>
+
+      
+
+<div class="site-section">
+  <div class="container">
+    {% if not user.is_authenticated %}
+
+    <div class="row mb-5">
+      <div class="col-md-12">
+        <div class="border p-4 rounded" role="alert">
+          Returning customer? <a href="{% url 'login'%}">Click here</a> to login
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    <div class="row">
+      <div class="col-md-6 mb-5 mb-md-0">
+        {% if not user.is_authenticated %}
+        <h2 class="h3 mb-3 text-black">Billing Details</h2>
+        <div class="p-3 p-lg-5 border">
+            <form method="post">
+                {% csrf_token %}
+                {{ form.non_field_errors }}
+    
+                <div class="form-group row">
+                  <div class="col-md-12">
+                    <label for="{{ form.username.id_for_label }}" class="text-black">Username
+                    </label>
+                    <input class="form-control" id="{{ form.username.id_for_label }}" name="{{ form.username.html_name }}"
+                    type="text" />
+                    <span class="text-danger">{{ form.username.errors }}</span>
+                  </div>
+                </div>
+    
+                <div class="form-group row">
+                  <div class="col-md-12">
+                    <label for="{{ form.password1.id_for_label }}" class="text-black">Password
+                    </label>
+                    <input class="form-control" id="{{ form.password1.id_for_label }}" name="{{ form.password1.html_name }}"
+                    type="password" />
+                    <span class="text-danger">{{ form.password1.errors }}</span>
+                  </div>
+                </div>
+    
+                <div class="form-group row">
+                  <div class="col-md-12">
+                    <label for="{{ form.password2.id_for_label }}" class="text-black">Confirm Password
+                    </label>
+                    <input class="form-control" id="{{ form.password2.id_for_label }}" name="{{ form.password2.html_name }}"
+                    type="password" />
+                    <span class="text-danger">{{ form.password2.errors }}</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="{{ form.country.id_for_label }}" class="text-black">Country <span
+                    class="text-danger">*</span></label>
+                    {% get_countries as countries %}
+                    <select class="form-control" id="{{ form.country.id_for_label }}" name="{{ form.country.html_name }}">
+                        <option value>Select a Country</option>
+                      {% for country in countries %}
+                      <option value="{{ country.code }}">{{ country.name }}</option>
+                      {% endfor %}
+                    </select>
+                    <span
+                    <span class="text-danger">{{ form.country.errors }}</span>
+                </div>
+    
+                <div class="form-group row">
+                  <div class="col-md-6">
+                    <label for="{{ form.first_name.id_for_label }}" class="text-black">First Name <span
+                      class="text-danger">*</span></label>
+                      <input type="text" class="form-control" id="{{ form.first_name.id_for_label }}"
+                      name="{{ form.first_name.html_name }}">
+                      <span class="text-danger">{{ form.first_name.errors }}</span>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="{{ form.last_name.id_for_label }}" class="text-black">Last Name <span
+                      class="text-danger">*</span></label>
+                      <input type="text" class="form-control" id="{{ form.last_name.id_for_label }}"
+                      name="{{ form.last_name.html_name }}">
+                      <span class="text-danger">{{ form.last_name.errors }}</span>
+                  </div>
+                </div>
+    
+    
+                <div class="form-group row">
+                  <div class="col-md-12">
+                    <label for="{{ form.company.id_for_label }}" class="text-black">Company Name </label>
+                    <input type="text" class="form-control" id="{{ form.company.id_for_label }}"
+                    name="{{ form.company.html_name }}">
+                    <span class="text-danger">{{ form.company.errors }}</span>
+                  </div>
+                </div>
+    
+                <div class="form-group row">
+                  <div class="col-md-12">
+                    <label for="{{ form.address_line_one.id_for_label }}" class="text-black">Address <span
+                      class="text-danger">*</span></label>
+                      <input type="text" class="form-control" id="{{ form.address_line_one.id_for_label }}"
+                      name="{{ form.address_line_one.html_name }}" placeholder="Street address">
+                      <span class="text-danger">{{ form.address_line_one.errors }}</span>
+                  </div>
+                </div>
+    
+                <div class="form-group">
+                  <input type="text" class="form-control" name="{{ form.address_line_two.html_name }}"
+                  placeholder="Apartment, suite, unit etc. (optional)">
+                  <span class="text-danger">{{ form.address_line_two.errors }}</span>
+                </div>
+    
+                <div class="form-group row">
+                  <div class="col-md-6">
+                    <label for="{{ form.email.id_for_label }}" class="text-black">Email Address <span
+                      class="text-danger">*</span></label>
+                      <input type="text" class="form-control" id="{{ form.email.id_for_label }}"
+                      name="{{ form.email.html_name }}">
+                      <span class="text-danger">{{ form.email.errors }}</span>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="{{ form.phone.id_for_label }}" class="text-black">Phone <span
+                      class="text-danger">*</span></label>
+                      <input type="text" class="form-control" id="{{ form.phone.id_for_label }}"
+                      name="{{ form.phone.html_name }}" placeholder="Phone Number">
+                      <span class="text-danger">{{ form.phone.errors }}</span>
+                  </div>
+                </div>
+    
+                <button class="btn btn-primary btn-sm px-4" type="submit">
+                  Sign Up
+                </button>
+              </form>
+       
+        </div>
+        {% else %}
+        <img src="{% static "fashion/images/model_2.png" %}" alt="Image" class="img-fluid">
+      {% endif %}
+      </div>
+      <div class="col-md-6">
+        <div class="row mb-5">
+          <div class="col-md-12">
+            <h2 class="h3 mb-3 text-black">Coupon Code</h2>
+            <div class="p-3 p-lg-5 border">
+
+              <label for="c_code" class="text-black mb-3">Enter your coupon code if you have one</label>
+              <div class="input-group w-75">
+                <input type="text" class="form-control" id="c_code" placeholder="Coupon Code" aria-label="Coupon Code"
+                  aria-describedby="button-addon2">
+                <div class="input-group-append">
+                  <button class="btn btn-primary btn-sm px-4" type="button" id="button-addon2">Apply</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="row mb-5">
+          <div class="col-md-12">
+            <h2 class="h3 mb-3 text-black">Your Order</h2>
+            <div class="p-3 p-lg-5 border">
+              <table class="table site-block-order-table mb-5">
+                <thead>
+                  <th>Product</th>
+                  <th>Total</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Top Up T-Shirt <strong class="mx-2">x</strong> 1</td>
+                    <td>$250.00</td>
+                  </tr>
+                  <tr>
+                    <td>Polo Shirt <strong class="mx-2">x</strong> 1</td>
+                    <td>$100.00</td>
+                  </tr>
+                  <tr>
+                    <td class="text-black font-weight-bold"><strong>Cart Subtotal</strong></td>
+                    <td class="text-black">$350.00</td>
+                  </tr>
+                  <tr>
+                    <td class="text-black font-weight-bold"><strong>Order Total</strong></td>
+                    <td class="text-black font-weight-bold"><strong>$350.00</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="border p-3 mb-3">
+                <h3 class="h6 mb-0"><a class="d-block" data-toggle="collapse" href="#collapsebank" role="button"
+                    aria-expanded="false" aria-controls="collapsebank">Direct Bank Transfer</a></h3>
+
+                <div class="collapse" id="collapsebank">
+                  <div class="py-2">
+                    <p class="mb-0">Make your payment directly into our bank account. Please use your Order ID as the
+                      payment reference. Your order won’t be shipped until the funds have cleared in our account.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="border p-3 mb-3">
+                <h3 class="h6 mb-0"><a class="d-block" data-toggle="collapse" href="#collapsecheque" role="button"
+                    aria-expanded="false" aria-controls="collapsecheque">Cheque Payment</a></h3>
+
+                <div class="collapse" id="collapsecheque">
+                  <div class="py-2">
+                    <p class="mb-0">Make your payment directly into our bank account. Please use your Order ID as the
+                      payment reference. Your order won’t be shipped until the funds have cleared in our account.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="border p-3 mb-5">
+                <h3 class="h6 mb-0"><a class="d-block" data-toggle="collapse" href="#collapsepaypal" role="button"
+                    aria-expanded="false" aria-controls="collapsepaypal">Paypal</a></h3>
+
+                <div class="collapse" id="collapsepaypal">
+                  <div class="py-2">
+                    <p class="mb-0">Make your payment directly into our bank account. Please use your Order ID as the
+                      payment reference. Your order won’t be shipped until the funds have cleared in our account.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <button class="btn btn-primary btn-lg btn-block" onclick="window.location='thankyou.html'">Place
+                  Order</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- </form> -->
+  </div>
+</div>
+
+{% endblock %}
