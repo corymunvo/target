@@ -3,39 +3,39 @@
     "model": "fashion.Product",
     "pk": 1,
     "fields": {
-      "label": "Gray Shoes",
-      "image_url": "fashion/images/prod_2.png",
-      "price": 20.0,
-      "stars": 0
+      "label": "Denim Slim-Fit Pants",
+      "image_url": "fashion/images/pants_1.png",
+      "price": 61.0,
+      "stars": 3
     }
   },
   {
     "model": "fashion.Product",
     "pk": 2,
     "fields": {
-      "label": "Blue Shoe High Heels",
-      "image_url": "fashion/images/prod_3.png",
-      "price": 28.0,
-      "stars": 0
+      "label": "Denim Boot-Cut Pants",
+      "image_url": "fashion/images/pants_2.png",
+      "price": 70.0,
+      "stars": 2
     }
   },
   {
     "model": "fashion.Product",
     "pk": 3,
     "fields": {
-      "label": "Denim Jacket",
-      "image_url": "fashion/images/model_5.png",
-      "price": 28.0,
-      "stars": 5
+      "label": "Gray Shoes",
+      "image_url": "fashion/images/shoe_1.png",
+      "price": 35.0,
+      "stars": 0
     }
   },
   {
     "model": "fashion.Product",
     "pk": 4,
     "fields": {
-      "label": "Leather Green Bag",
-      "image_url": "fashion/images/prod_1.png",
-      "price": 28.0,
+      "label": "Smart Watch",
+      "image_url": "fashion/images/watch_1.png",
+      "price": 420.0,
       "stars": 5
     }
   },
@@ -43,10 +43,10 @@
     "model": "fashion.Product",
     "pk": 5,
     "fields": {
-      "label": "Smooth Cloth",
-      "image_url": "fashion/images/model_1.png",
-      "price": 28.0,
-      "stars": 0
+      "label": "Hip Glasses",
+      "image_url": "fashion/images/sunglasses_3.png",
+      "price": 105.0,
+      "stars": 4
     }
   },
   {
@@ -63,25 +63,85 @@
     "model": "fashion.Product",
     "pk": 7,
     "fields": {
-      "label": "Gray Shoes",
-      "image_url": "fashion/images/prod_2.png",
-      "price": 20.0,
-      "stars": 0
+      "label": "Blue Light Sunglasses",
+      "image_url": "fashion/images/sunglasses_1.png",
+      "price": 112.0,
+      "stars": 5
     }
   },
   {
     "model": "fashion.Product",
     "pk": 8,
     "fields": {
-      "label": "Blue Shoe High Heels",
-      "image_url": "fashion/images/prod_3.png",
-      "price": 28.0,
-      "stars": 0
+      "label": "Leather Green Bag",
+      "image_url": "fashion/images/bag_1.png",
+      "price": 31.0,
+      "stars": 5
     }
   },
   {
     "model": "fashion.Product",
     "pk": 9,
+    "fields": {
+      "label": "Classy Girl Clutch",
+      "image_url": "fashion/images/bag_4.png",
+      "price": 60.0,
+      "stars": 4
+    }
+  },
+  {
+    "model": "fashion.Product",
+    "pk": 10,
+    "fields": {
+      "label": "Thing Glasses",
+      "image_url": "fashion/images/sunglasses_2.png",
+      "price": 90.0,
+      "stars": 4
+    }
+  },
+  {
+    "model": "fashion.Product",
+    "pk": 11,
+    "fields": {
+      "label": "Grey Sneakers",
+      "image_url": "fashion/images/shoe_4.png",
+      "price": 40.0,
+      "stars": 1
+    }
+  },
+  {
+    "model": "fashion.Product",
+    "pk": 12,
+    "fields": {
+      "label": "Smooth Cloth",
+      "image_url": "fashion/images/model_1.png",
+      "price": 16.0,
+      "stars": 0
+    }
+  },
+  {
+    "model": "fashion.Product",
+    "pk": 13,
+    "fields": {
+      "label": "Dress Shoes",
+      "image_url": "fashion/images/shoe_5.png",
+      "price": 78.0,
+      "stars": 5
+    }
+  },
+  {
+    "model": "fashion.Product",
+    "pk": 14,
+    "fields": {
+      "label": "Easy Day Sweater",
+      "image_url": "fashion/images/cloth_4.png",
+      "price": 45.0,
+      "stars": 4
+    }
+  },
+  {
+    "model": "fashion.Product",
+    "pk": 15,
     "fields": {
       "label": "Denim Jacket",
       "image_url": "fashion/images/model_5.png",
@@ -91,31 +151,71 @@
   },
   {
     "model": "fashion.Product",
-    "pk": 10,
+    "pk": 16,
     "fields": {
-      "label": "Leather Green Bag",
-      "image_url": "fashion/images/prod_1.png",
-      "price": 28.0,
-      "stars": 5
-    }
-  },
-  {
-    "model": "fashion.Product",
-    "pk": 11,
-    "fields": {
-      "label": "Smooth Cloth",
-      "image_url": "fashion/images/model_1.png",
-      "price": 28.0,
+      "label": "Blue Shoe High Heels",
+      "image_url": "fashion/images/shoe_2.png",
+      "price": 51.0,
       "stars": 0
     }
   },
   {
     "model": "fashion.Product",
-    "pk": 12,
+    "pk": 17,
     "fields": {
-      "label": "Yellow Jacket",
-      "image_url": "fashion/images/model_7.png",
-      "price": 58.0,
+      "label": "Trendy White Bag",
+      "image_url": "fashion/images/bag_3.png",
+      "price": 160.0,
+      "stars": 2
+    }
+  },
+  {
+    "model": "fashion.Product",
+    "pk": 18,
+    "fields": {
+      "label": "Red Heels",
+      "image_url": "fashion/images/shoe_3.png",
+      "price": 45.0,
+      "stars": 3
+    }
+  },
+  {
+    "model": "fashion.Product",
+    "pk": 19,
+    "fields": {
+      "label": "Aviator Watch",
+      "image_url": "fashion/images/watch_2.png",
+      "price": 560.0,
+      "stars": 3
+    }
+  },
+  {
+    "model": "fashion.Product",
+    "pk": 20,
+    "fields": {
+      "label": "Timeless Watch",
+      "image_url": "fashion/images/watch_3.png",
+      "price": 880.0,
+      "stars": 5
+    }
+  },
+  {
+    "model": "fashion.Product",
+    "pk": 21,
+    "fields": {
+      "label": "Leather Brown Bag",
+      "image_url": "fashion/images/bag_2.png",
+      "price": 210.0,
+      "stars": 5
+    }
+  },
+  {
+    "model": "fashion.Product",
+    "pk": 22,
+    "fields": {
+      "label": "Bespoke Denim",
+      "image_url": "fashion/images/pants_3.png",
+      "price": 55.0,
       "stars": 4
     }
   }
