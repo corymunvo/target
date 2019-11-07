@@ -44,7 +44,7 @@
     "pk": 5,
     "fields": {
       "label": "Hip Glasses",
-      "image_url": "fashion/images/sunglasses_3.png",
+      "image_url": "fashion/images/glasses_3.png",
       "price": 105.0,
       "stars": 4
     }
@@ -63,8 +63,8 @@
     "model": "fashion.Product",
     "pk": 7,
     "fields": {
-      "label": "Blue Light Sunglasses",
-      "image_url": "fashion/images/sunglasses_1.png",
+      "label": "Blue Light Glasses",
+      "image_url": "fashion/images/glasses_1.png",
       "price": 112.0,
       "stars": 5
     }
@@ -94,7 +94,7 @@
     "pk": 10,
     "fields": {
       "label": "Thing Glasses",
-      "image_url": "fashion/images/sunglasses_2.png",
+      "image_url": "fashion/images/glasses_2.png",
       "price": 90.0,
       "stars": 4
     }
@@ -216,6 +216,156 @@
       "label": "Bespoke Denim",
       "image_url": "fashion/images/pants_3.png",
       "price": 55.0,
+      "stars": 4
+    }
+  },
+  {
+    "model": "fashion.Product",
+    "pk": 23,
+    "fields": {
+      "label": "Shaded sleek glasses",
+      "image_url": "fashion/images/glasses_4.png",
+      "price": 165.0,
+      "stars": 2
+    }
+  },
+  {
+    "model": "fashion.Product",
+    "pk": 24,
+    "fields": {
+      "label": "Gen 3 Smart Watch",
+      "image_url": "fashion/images/watch_4.png",
+      "price": 130.0,
+      "stars": 3
+    }
+  },
+  {
+    "model": "fashion.Product",
+    "pk": 25,
+    "fields": {
+      "label": "Techie Watch",
+      "image_url": "fashion/images/watch_5.png",
+      "price": 60.0,
+      "stars": 3
+    }
+  },
+  {
+    "model": "fashion.Product",
+    "pk": 26,
+    "fields": {
+      "label": "Retro Watch",
+      "image_url": "fashion/images/watch_6.png",
+      "price": 85.0,
+      "stars": 4
+    }
+  },
+  {
+    "model": "fashion.Product",
+    "pk": 27,
+    "fields": {
+      "label": "Airport Bag",
+      "image_url": "fashion/images/bag_4.png",
+      "price": 185.0,
+      "stars": 5
+    }
+  },
+  {
+    "model": "fashion.Product",
+    "pk": 28,
+    "fields": {
+      "label": "Classic Brown Bag",
+      "image_url": "fashion/images/bag_5.png",
+      "price": 160.0,
+      "stars": 2
+    }
+  },
+  {
+    "model": "fashion.Product",
+    "pk": 29,
+    "fields": {
+      "label": "Over Shoulder Bag",
+      "image_url": "fashion/images/bag_6.png",
+      "price": 120.0,
+      "stars": 5
+    }
+  },
+  {
+    "model": "fashion.Product",
+    "pk": 30,
+    "fields": {
+      "label": "Classic Monotone Watch",
+      "image_url": "fashion/images/watch_7.png",
+      "price": 355.0,
+      "stars": 4
+    }
+  },
+  {
+    "model": "fashion.Product",
+    "pk": 31,
+    "fields": {
+      "label": "Light Weight Sneakers",
+      "image_url": "fashion/images/shoe_6.png",
+      "price": 155.0,
+      "stars": 4
+    }
+  },
+  {
+    "model": "fashion.Product",
+    "pk": 32,
+    "fields": {
+      "label": "Night Out Yellow Heels",
+      "image_url": "fashion/images/shoe_7.png",
+      "price": 155.0,
+      "stars": 2
+    }
+  },
+  {
+    "model": "fashion.Product",
+    "pk": 33,
+    "fields": {
+      "label": "Night Out Pink Heels",
+      "image_url": "fashion/images/shoe_8.png",
+      "price": 155.0,
+      "stars": 5
+    }
+  },
+  {
+    "model": "fashion.Product",
+    "pk": 34,
+    "fields": {
+      "label": "Special Lens Glasses",
+      "image_url": "fashion/images/glasses_4.png",
+      "price": 105.0,
+      "stars": 4
+    }
+  },
+  {
+    "model": "fashion.Product",
+    "pk": 35,
+    "fields": {
+      "label": "Trend Glasses",
+      "image_url": "fashion/images/glasses_5.png",
+      "price": 110.0,
+      "stars": 4
+    }
+  },
+  {
+    "model": "fashion.Product",
+    "pk": 36,
+    "fields": {
+      "label": "Hipster Glasses",
+      "image_url": "fashion/images/glasses_6.png",
+      "price": 140.0,
+      "stars": 4
+    }
+  },
+  {
+    "model": "fashion.Product",
+    "pk": 36,
+    "fields": {
+      "label": "Red Business Glasses",
+      "image_url": "fashion/images/glasses_6.png",
+      "price": 125.0,
       "stars": 4
     }
   }
