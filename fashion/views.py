@@ -1,8 +1,9 @@
+import csv
 from django.shortcuts import render, redirect
 from django.core.paginator import Paginator
 from .forms import SignUpForm
 from django.contrib.auth import login, authenticate
-
+from django.http import HttpResponse
 
 from .models import Product
 
@@ -85,3 +86,18 @@ def signUp(request):
 def shopSingle(request, product_id):
     product = Product.objects.get(pk=product_id)
     return render(request, 'fashion/shop-single.html', {'product': product})
+
+
+def csvProducts(request):
+    # Create the HttpResponse object with the appropriate CSV header.
+    response = HttpResponse(content_type='text/csv')
+    response['Content-Disposition'] = 'attachment; filename="products.csv"'
+
+    product_list = Product.objects.all().order_by('id')
+
+    writer = csv.writer(response)
+
+    for product in product_list:
+        writer.writerow([product.id, product.label, '', '', product.image_url, product.price, '', 100, product.price, '', '', '', '', '', '', '', '', '', '', '', ''])
+
+    return response

@@ -14,6 +14,7 @@ urlpatterns = [
     path('shop.html', views.shop, name='shop'),
     path('thankyou.html', views.thankyou, name='thankyou'),
     path('sign-up.html', views.signUp, name='signUp'),
-
+    path('products.csv', views.csvProducts, name='csvProducts'),
+    
     path('<int:product_id>/shop-single.html', views.shopSingle, name='shopSingle'),
 ]
