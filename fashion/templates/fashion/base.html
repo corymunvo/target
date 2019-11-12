@@ -20,8 +20,10 @@
 
     <link rel="stylesheet" href="{% static "fashion/css/style.css" %}">
     <script>
+      
       function targetPageParams() {
         return {
+          {% if user.is_authenticated %}"mbox3rdPartyId": {{ user.id}}, {% endif %}
           "at_property": "0ef7b95c-5237-e232-72c8-4116cc78edda"
         };
       }
