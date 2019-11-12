@@ -5,40 +5,14 @@
     <div class="row">
       <div class="col-md-6 ml-auto order-md-2 align-self-start">
         <div class="site-block-cover-content">
-          <h2 class="sub-title">#New Summer Collection 2019</h2>
+          <h2 class="sub-title">New Summer Collection 2019</h2>
           <h1>Arrivals Sales</h1>
-          <p><a href="#" class="btn btn-black rounded-0">Shop Now</a></p>
+          <p><a href="{% url 'shop'%}" class="btn btn-black rounded-0">Shop Now</a></p>
         </div>
       </div>
       <div class="col-md-6 order-1 align-self-end">
         <img src="{% static "fashion/images/model_3.png" %}" alt="Image" class="img-fluid">
       </div>
-    </div>
-  </div>
-</div>
-
-<div class="site-section">
-  <div class="container">
-    <div class="row">
-      <div class="title-section mb-5 col-12">
-        <h2 class="text-uppercase">Recommendation for You</h2>
-      </div>
-    </div>
-    <div id="recommended-for-you"  class="row recommended-for-you">
-        Recommendation goes here
-    </div>
-  </div>
-</div>
-
-<div class="site-section">
-  <div class="container">
-    <div class="row">
-      <div class="title-section mb-5 col-12">
-        <h2 class="text-uppercase">Popular Products</h2>
-      </div>
-    </div>
-    <div id="popular-items" class="row popular-items">
-        Recommendation goes here
     </div>
   </div>
 </div>
@@ -51,18 +25,18 @@
     <div class="row align-items-stretch">
       <div class="col-lg-8">
         <div class="product-item sm-height full-height bg-gray">
-          <a href="#" class="product-category">Women <span>25 items</span></a>
+          <a href="{% url 'shop'%}" class="product-category">Women <span>25 items</span></a>
           <img src="{% static "fashion/images/model_4.png" %}" alt="Image" class="img-fluid">
         </div>
       </div>
       <div class="col-lg-4">
         <div class="product-item sm-height bg-gray mb-4">
-          <a href="#" class="product-category">Men <span>25 items</span></a>
+          <a href="{% url 'shop'%}" class="product-category">Men <span>25 items</span></a>
           <img src="{% static "fashion/images/model_5.png" %}" alt="Image" class="img-fluid">
         </div>
 
         <div class="product-item sm-height bg-gray">
-          <a href="#" class="product-category">Shoes <span>25 items</span></a>
+          <a href="{% url 'shop'%}" class="product-category">Shoes <span>25 items</span></a>
           <img src="{% static "fashion/images/model_6.png" %}" alt="Image" class="img-fluid">
         </div>
       </div>
@@ -86,10 +60,10 @@
         <div class="nonloop-block-3 owl-carousel">
           <div class="item">
             <div class="item-entry">
-              <a href="#" class="product-item md-height bg-gray d-block">
+              <a href="{% url 'shop'%}" class="product-item md-height bg-gray d-block">
                 <img src="{% static "fashion/images/model_1.png" %}" alt="Image" class="img-fluid">
               </a>
-              <h2 class="item-title"><a href="#">Smooth Cloth</a></h2>
+              <h2 class="item-title"><a href="{% url 'shop'%}">Smooth Cloth</a></h2>
               <strong class="item-price"><del>$46.00</del> $28.00</strong>
               <div class="star-rating">
                 <span class="icon-star2 text-warning"></span>
@@ -102,10 +76,10 @@
           </div>
           <div class="item">
             <div class="item-entry">
-              <a href="#" class="product-item md-height bg-gray d-block">
+              <a href="{% url 'shop'%}" class="product-item md-height bg-gray d-block">
                 <img src="{% static "fashion/images/shoe_2.png" %}" alt="Image" class="img-fluid">
               </a>
-              <h2 class="item-title"><a href="#">Blue Shoe High Heels</a></h2>
+              <h2 class="item-title"><a href="{% url 'shop'%}">Blue Shoe High Heels</a></h2>
               <strong class="item-price"><del>$46.00</del> $28.00</strong>
 
               <div class="star-rating">
@@ -119,10 +93,10 @@
           </div>
           <div class="item">
             <div class="item-entry">
-              <a href="#" class="product-item md-height bg-gray d-block">
+              <a href="{% url 'shop'%}" class="product-item md-height bg-gray d-block">
                 <img src="{% static "fashion/images/model_5.png" %}" alt="Image" class="img-fluid">
               </a>
-              <h2 class="item-title"><a href="#">Denim Jacket</a></h2>
+              <h2 class="item-title"><a href="{% url 'shop'%}">Denim Jacket</a></h2>
               <strong class="item-price"><del>$46.00</del> $28.00</strong>
 
               <div class="star-rating">
@@ -137,10 +111,10 @@
           </div>
           <div class="item">
             <div class="item-entry">
-              <a href="#" class="product-item md-height bg-gray d-block">
+              <a href="{% url 'shop'%}" class="product-item md-height bg-gray d-block">
                 <img src="{% static "fashion/images/bag_1.png" %}" alt="Image" class="img-fluid">
               </a>
-              <h2 class="item-title"><a href="#">Leather Green Bag</a></h2>
+              <h2 class="item-title"><a href="{% url 'shop'%}">Leather Green Bag</a></h2>
               <strong class="item-price"><del>$46.00</del> $28.00</strong>
               <div class="star-rating">
                 <span class="icon-star2 text-warning"></span>
@@ -153,10 +127,10 @@
           </div>
           <div class="item">
             <div class="item-entry">
-              <a href="#" class="product-item md-height bg-gray d-block">
+              <a href="{% url 'shop'%}" class="product-item md-height bg-gray d-block">
                 <img src="{% static "fashion/images/model_7.png" %}" alt="Image" class="img-fluid">
               </a>
-              <h2 class="item-title"><a href="#">Yellow Jacket</a></h2>
+              <h2 class="item-title"><a href="{% url 'shop'%}">Yellow Jacket</a></h2>
               <strong class="item-price">$58.00</strong>
               <div class="star-rating">
                 <span class="icon-star2 text-warning"></span>
@@ -180,7 +154,7 @@
     <div class="row">
       <div class="col-md-6 ml-auto order-md-2 align-self-start">
         <div class="site-block-cover-content">
-          <h2 class="sub-title">#New Summer Collection 2019</h2>
+          <h2 class="sub-title">{% url 'shop'%}New Summer Collection 2019</h2>
           <h1>New Shoes</h1>
           <p><a href="{% url 'shop'%}" class="btn btn-black rounded-0">Shop Now</a></p>
         </div>
