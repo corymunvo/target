@@ -4,6 +4,7 @@ from django.core.paginator import Paginator
 from .forms import SignUpForm
 from django.contrib.auth import login, authenticate
 from django.http import HttpResponse
+from django.template import loader
 
 from .models import Product
 
@@ -94,10 +95,9 @@ def csvProducts(request):
     response['Content-Disposition'] = 'attachment; filename="products.csv"'
 
     product_list = Product.objects.all().order_by('id')
+    t = loader.get_template('fashion/product.txt')
+    c = {'data': product_list}
+    response.write(t.render(c))
 
-    writer = csv.writer(response)
-
-    for product in product_list:
-        writer.writerow([product.id, product.label, '', '', product.image_url, product.price, '', 100, product.price, '', '', '', '', '', '', '', '', '', '', '', ''])
 
     return response
