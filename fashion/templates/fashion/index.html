@@ -18,6 +18,33 @@
     </div>
 
     <div class="site-section">
+        <div class="container">
+          <div class="row">
+            <div class="title-section mb-5 col-12">
+              <h2 class="text-uppercase">Recommended for You</h2>
+            </div>
+          </div>
+          <div class="row">
+            
+   
+          </div>
+        </div>
+      </div>
+
+      <div class="site-section">
+          <div class="container">
+            <div class="row">
+              <div class="title-section mb-5 col-12">
+                <h2 class="text-uppercase">Popular Products</h2>
+              </div>
+            </div>
+            <div class="row">
+             
+            </div>
+          </div>
+        </div>
+        
+    <div class="site-section">
       <div class="container">
         <div class="title-section mb-5">
           <h2 class="text-uppercase"><span class="d-block">Discover</span> The Collections</h2>
@@ -46,38 +73,7 @@
 
 
     
-    <div class="site-section">
-      <div class="container">
-        <div class="row">
-          <div class="title-section mb-5 col-12">
-            <h2 class="text-uppercase">Popular Products</h2>
-          </div>
-        </div>
-        <div class="row">
-          {% for product in products %}
-          <div class="col-lg-6 col-md-6 item-entry mb-4">
-            <a href="#" class="product-item md-height bg-gray d-block">
-              <img src="{% static product.thumbnail_url %}" alt="Image"
-              class="img-fluid">
-            </a>
-            <h2 class="item-title">
-              <a href="#">{{ product.name }}</a>
-            </h2>
-            <strong class="item-price">${{ product.price }}</strong>
-            {% if product.stars > 0 %}
-              {% with ''|center:product.stars as range %}
-            <div class="star-rating">
-              {% for i in range   %}
-              <span {{i}} class="icon-star2 text-warning"></span>
-              {% endfor %}
-            </div>
-            {% endwith %}
-            {% endif %}
-          </div>
-          {% endfor %}
-        </div>
-      </div>
-    </div>
+
 
     <div class="site-section">
       <div class="container">
