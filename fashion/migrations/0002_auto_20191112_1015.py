@@ -2,7 +2,7 @@ import os
 from django.db import migrations
 from sys import path
 from django.core import serializers
-
+import time;
 fixture_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '../fixtures'))
 fixture_filename = 'initial_products.json'
 

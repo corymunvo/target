@@ -950,3 +950,11 @@ a {
 
 .height-auto {
   height: auto !important; }
+
+
+.spaced br {
+  content: "";
+  margin: 2em;
+  display: block;
+  font-size: 24%;
+}

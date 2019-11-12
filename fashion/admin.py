@@ -4,8 +4,8 @@ from django.contrib import admin
 from .models import Product, Profile
 
 class ProductAdmin(admin.ModelAdmin):
-    fields = ['label', 'image_url', 'price', 'stars']
-    list_display = ('label', 'image_url', 'price', 'stars')
+    fields = ['name', 'thumbnail_url', 'price', 'stars']
+    list_display = ('name', 'thumbnail_url', 'price', 'stars')
 
 admin.site.register(Product,  ProductAdmin)
 

@@ -6,10 +6,19 @@ from django.contrib.auth.models import User
 from django_countries.fields import CountryField
 from phonenumber_field.modelfields import PhoneNumberField
 
+
 class Product(models.Model):
-    label = models.CharField(max_length=200)
-    image_url = models.CharField(max_length=200)
+    name = models.CharField(max_length=200)
+    category = models.CharField(max_length=200)
+    message = models.TextField(max_length=400)
+    thumbnail_url = models.CharField(max_length=200)
     price = models.DecimalField(max_digits=6, decimal_places=2)
+    inventory = models.IntegerField()
+    margin = models.DecimalField(max_digits=2, decimal_places=2)
+    updated_at = models.DateTimeField(auto_now=True)
+    tags = models.CharField(max_length=200)
+    color = models.CharField(max_length=200)
+    size = models.CharField(max_length=200)
     stars = models.SmallIntegerField()
 
 

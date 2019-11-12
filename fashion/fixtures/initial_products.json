@@ -3,370 +3,629 @@
     "model": "fashion.Product",
     "pk": 1,
     "fields": {
-      "label": "Denim Slim-Fit Pants",
-      "image_url": "fashion/images/pants_1.png",
+      "name": "Denim Slim-Fit Pants",
+      "category": "Pants and Legwear",
+      "message": "Assumenda consequuntur voluptas saepe. Et soluta culpa. Maiores ea nihil.\nAmet tenetur sint. Aut explicabo ea qui. Accusantium nulla aut.\nRepellendus libero laborum et. Aut dolorem et. Saepe rem blanditiis.",
+      "thumbnail_url": "fashion/images/pants_1.png",
       "price": 61.0,
-      "stars": 3
+      "inventory": 610,
+      "margin": 0.65,
+      "color": "navy blue",
+      "size": "100x20x30cm",
+      "stars": 3,
+      "updated_at": "2019-03-10 11:16:09.184106+01:00"
     }
   },
   {
     "model": "fashion.Product",
     "pk": 2,
     "fields": {
-      "label": "Denim Boot-Cut Pants",
-      "image_url": "fashion/images/pants_2.png",
+      "name": "Denim Boot-Cut Pants",
+      "category": "Pants and Legwear",
+      "message": "Animi minima a omnis. Voluptatem id necessitatibus doloremque et et ut. Itaque dolores est nisi ut pariatur numquam qui eaque et. Odio doloremque ipsam aut magni quasi dolorum. Voluptatem non optio quia. Dolores vel ipsum temporibus asperiores adipisci.\nDicta et ipsam quia aut. Rerum vitae quis. A dicta debitis rem at.\nUt quisquam ab ut. Tempore excepturi quis sed sint nisi aut aut. Quae illum nulla est. Velit ut occaecati deserunt velit veritatis. Totam adipisci perferendis expedita rerum qui sequi sequi error est. Officiis aut id molestiae nulla et sit.",
+      "thumbnail_url": "fashion/images/pants_2.png",
       "price": 70.0,
-      "stars": 2
+      "inventory": 700,
+      "margin": 0.75,
+      "color": "navy blue",
+      "size": "100x20x30cm",
+      "stars": 2,
+      "updated_at": "2019-03-10 11:16:09.184106+01:00"
     }
   },
   {
     "model": "fashion.Product",
     "pk": 3,
     "fields": {
-      "label": "Gray Shoes",
-      "image_url": "fashion/images/shoe_1.png",
+      "name": "Grey Shoes",
+      "category": "Shoes and Footwear",
+      "message": "Maiores nesciunt maiores. Earum quas quia pariatur ut id delectus incidunt. Quisquam ut magni labore fugiat ab eveniet nesciunt officiis voluptates. Qui animi aut ex aperiam. Vel pariatur aut qui.\nEarum delectus molestiae ex praesentium quo omnis ut. Ab aliquid nobis qui perferendis eligendi consequuntur dolorem ipsum ut. Voluptatem eius a quia. Qui harum autem.\nVelit esse delectus incidunt consequuntur consequatur harum qui laboriosam vero. Repudiandae ea iusto et earum rerum recusandae. Nisi maxime quae officiis saepe. Aut laboriosam placeat harum omnis sit nostrum numquam et qui. Tempore possimus odio optio sed qui sint ullam hic.",
+      "thumbnail_url": "fashion/images/shoe_1.png",
       "price": 35.0,
-      "stars": 0
+      "inventory": 350,
+      "margin": 0.35,
+      "color": "grey",
+      "size": "100x20x30cm",
+      "stars": 0,
+      "updated_at": "2019-03-10 11:16:09.184106+01:00"
     }
   },
   {
     "model": "fashion.Product",
     "pk": 4,
     "fields": {
-      "label": "Smart Watch",
-      "image_url": "fashion/images/watch_1.png",
+      "name": "Smart Watch",
+      "category": "Watches and Jewelry",
+      "message": "Asperiores eum dolorum fuga ut libero quibusdam eligendi sed. Ratione in dolor qui voluptatibus laborum sit assumenda. Esse sit ullam est ut et error et quia ab. Saepe earum laudantium eum nihil aut incidunt sit exercitationem.\nEst sint est ea alias optio iste omnis labore facere. Quo dolores unde asperiores iure explicabo autem eum. Explicabo quod qui autem maiores nihil tempore. Sed molestiae debitis eligendi recusandae harum accusantium vitae. Non ea magni odio est aut dolorem rerum.\nAut quae a quidem ut pariatur asperiores. Exercitationem rerum corporis quo autem voluptatibus dolor non. Quis assumenda odit labore cum velit. Nihil facilis accusamus molestiae numquam aut facere autem. Provident voluptatum est expedita. Recusandae voluptate nemo natus est.",
+      "thumbnail_url": "fashion/images/watch_1.png",
       "price": 420.0,
-      "stars": 5
+      "inventory": 14200,
+      "margin": 0.45,
+      "color": "white",
+      "size": "100x20x30cm",
+      "stars": 5,
+      "updated_at": "2019-03-10 11:16:09.184106+01:00"
     }
   },
   {
     "model": "fashion.Product",
     "pk": 5,
     "fields": {
-      "label": "Hip Glasses",
-      "image_url": "fashion/images/glasses_3.png",
+      "name": "Hip Glasses",
+      "category": "Glasses and Eyewear",
+      "message": "Dolor facilis praesentium fugiat deleniti sint temporibus quibusdam voluptas laborum. Accusamus corrupti aut. Dolorum consequatur aspernatur provident doloremque. Et rerum unde molestiae.\nVoluptatem sequi harum excepturi nam. Sint commodi numquam dolorem nihil non non est. Mollitia qui quidem at doloremque aut quia beatae. Sit est quos est rerum et. Placeat animi qui ad veniam in.\nCupiditate dolor eveniet sint natus vitae. Pariatur sit iste quidem nihil architecto laboriosam nesciunt est iure. Tenetur ut eveniet consequuntur. Dolorem nostrum error molestias fugiat et corrupti eos. Quibusdam omnis enim quasi natus eos.",
+      "thumbnail_url": "fashion/images/glasses_3.png",
       "price": 105.0,
-      "stars": 4
+      "inventory": 11050,
+      "margin": 0.15,
+      "color": "black",
+      "size": "100x20x30cm",
+      "stars": 4,
+      "updated_at": "2019-03-10 11:16:09.184106+01:00"
     }
   },
   {
     "model": "fashion.Product",
     "pk": 6,
     "fields": {
-      "label": "Yellow Jacket",
-      "image_url": "fashion/images/model_7.png",
+      "name": "Yellow Jacket",
+      "category": "Coats and Jackets",
+      "message": "Repellendus dolore sunt magni eligendi qui commodi. Inventore sequi totam laborum. Impedit quam tempore nesciunt. Soluta est tempora quaerat similique numquam. Delectus in molestiae molestias necessitatibus culpa velit.\nConsequatur est culpa eveniet quas sunt. Quod perferendis sunt et neque corrupti maiores vel ad quasi. Sapiente ipsam ea ex doloremque neque voluptate earum. Molestiae sequi consequatur quia quo veniam quod numquam ratione voluptas.\nQuibusdam dolore qui esse quo corrupti ea. Aut non expedita tempore ea ipsam numquam. Soluta qui similique maxime saepe. Impedit labore a eos est enim ut consequatur.",
+      "thumbnail_url": "fashion/images/model_7.png",
       "price": 58.0,
-      "stars": 4
+      "inventory": 580,
+      "margin": 0.55,
+      "color": "yellow",
+      "size": "100x20x30cm",
+      "stars": 4,
+      "updated_at": "2019-03-10 11:16:09.184106+01:00"
     }
   },
   {
     "model": "fashion.Product",
     "pk": 7,
     "fields": {
-      "label": "Blue Light Glasses",
-      "image_url": "fashion/images/glasses_1.png",
+      "name": "Blue Light Glasses",
+      "category": "Glasses and Eyewear",
+      "message": "Saepe necessitatibus velit et qui corporis. Placeat placeat nihil et rerum cum dolorem ratione possimus dolor. Qui accusamus quam dolorum. Fugit cum deserunt ut aspernatur ducimus temporibus et at.\nAliquam et sit. Veritatis minima sed perferendis. Ut aut repudiandae et. Perspiciatis quo voluptatum laborum.\nAspernatur accusantium omnis reiciendis eum omnis eveniet. Exercitationem impedit aut voluptas incidunt voluptatum culpa provident quis aut. Mollitia ab qui ad est deleniti.",
+      "thumbnail_url": "fashion/images/glasses_1.png",
       "price": 112.0,
-      "stars": 5
+      "inventory": 11120,
+      "margin": 0.15,
+      "color": "blue",
+      "size": "100x20x30cm",
+      "stars": 5,
+      "updated_at": "2019-03-10 11:16:09.184106+01:00"
     }
   },
   {
     "model": "fashion.Product",
     "pk": 8,
     "fields": {
-      "label": "Leather Green Bag",
-      "image_url": "fashion/images/bag_1.png",
+      "name": "Leather Green Bag",
+      "category": "Bags and Clutches",
+      "message": "Ut delectus aut in quo. Ad vel quia velit ullam soluta ut sint. Occaecati suscipit ut quibusdam et sunt quam porro dolores. Qui et laborum quaerat qui reprehenderit suscipit est. Et laboriosam vero itaque ipsa eaque aut exercitationem libero sunt.\nVel a id natus sed voluptas ex alias est. Iusto facilis in. Facilis nihil nam quo aut beatae quia doloremque facilis.\nIpsam aperiam maxime est consectetur. Rerum minima culpa autem ducimus suscipit sit harum velit beatae. Quos fugiat quia tenetur rem beatae blanditiis aliquam perspiciatis. Ut quia voluptatem voluptas quia eos. Expedita dolores dolor ea magnam est eum laudantium.",
+      "thumbnail_url": "fashion/images/bag_1.png",
       "price": 31.0,
-      "stars": 5
+      "inventory": 310,
+      "margin": 0.35,
+      "color": "green",
+      "size": "100x20x30cm",
+      "stars": 5,
+      "updated_at": "2019-03-10 11:16:09.184106+01:00"
     }
   },
   {
     "model": "fashion.Product",
     "pk": 9,
     "fields": {
-      "label": "Classy Girl Clutch",
-      "image_url": "fashion/images/bag_4.png",
+      "name": "Classy Girl Clutch",
+      "category": "Bags and Clutches",
+      "message": "Veniam natus ut nostrum. Aut omnis nihil quo odio rerum sint sunt dolores. Ut velit officiis quam. Laudantium quis voluptate nostrum rerum eum culpa quibusdam eos sequi. Eius labore repudiandae harum.\nEst sequi quasi. Incidunt quasi suscipit odit dicta enim et laudantium in. Accusantium ut culpa deserunt voluptatum non cum adipisci non soluta.\nOccaecati omnis doloribus et. Autem aut atque eius. Voluptatem accusamus perspiciatis quas maxime ullam ipsam aspernatur vero.",
+      "thumbnail_url": "fashion/images/bag_4.png",
       "price": 60.0,
-      "stars": 4
+      "inventory": 600,
+      "margin": 0.65,
+      "color": "blue",
+      "size": "100x20x30cm",
+      "stars": 4,
+      "updated_at": "2019-03-10 11:16:09.184106+01:00"
     }
   },
   {
     "model": "fashion.Product",
     "pk": 10,
     "fields": {
-      "label": "Thing Glasses",
-      "image_url": "fashion/images/glasses_2.png",
+      "name": "Thin Glasses",
+      "category": "Glasses and Eyewear",
+      "message": "Corporis et illum vitae animi sit. Harum quod quasi veritatis sit dolore qui debitis voluptatibus ut. Facere est dolorem est labore. Exercitationem repellat labore facilis. Libero ut voluptas rem qui aspernatur consectetur repellendus ipsa iure.\nLaborum qui repudiandae assumenda. Officiis assumenda illum quisquam. Natus quidem molestiae dolorem asperiores.\nSint error velit. Non aut velit sit aut. Necessitatibus exercitationem molestias suscipit cupiditate maiores quia odio quibusdam.",
+      "thumbnail_url": "fashion/images/glasses_2.png",
       "price": 90.0,
-      "stars": 4
+      "inventory": 900,
+      "margin": 0.95,
+      "color": "black",
+      "size": "100x20x30cm",
+      "stars": 4,
+      "updated_at": "2019-03-10 11:16:09.184106+01:00"
     }
   },
   {
     "model": "fashion.Product",
     "pk": 11,
     "fields": {
-      "label": "Grey Sneakers",
-      "image_url": "fashion/images/shoe_4.png",
+      "name": "Grey Sneakers",
+      "category": "Shoes and Footwear",
+      "message": "Est ipsam eius. Nihil eum aut. Rerum eum repudiandae.\nAccusantium eaque et rem omnis aut est. Dolorum dolore aut sit ut. Et labore non. Repellat sed laudantium qui a aut.\nEt corrupti animi praesentium pariatur in repellendus facere reprehenderit odio. Quia possimus qui enim. Voluptatem natus perferendis aut quae. Sint reiciendis quo in reprehenderit. Consequatur itaque quia ut. Ea voluptatum rerum voluptas velit officia vel et illo alias.",
+      "thumbnail_url": "fashion/images/shoe_4.png",
       "price": 40.0,
-      "stars": 1
+      "inventory": 400,
+      "margin": 0.45,
+      "color": "grey",
+      "size": "100x20x30cm",
+      "stars": 1,
+      "updated_at": "2019-03-10 11:16:09.184106+01:00"
     }
   },
   {
     "model": "fashion.Product",
     "pk": 12,
     "fields": {
-      "label": "Smooth Cloth",
-      "image_url": "fashion/images/model_1.png",
+      "name": "Smooth Cloth",
+      "category": "Shirts and Sweaters",
+      "message": "Officia voluptas reprehenderit eos velit voluptatem aut adipisci vel. Consequatur facere ab modi soluta id ut impedit alias. Esse dicta perferendis quod. Dolorum aliquam cumque soluta molestiae ut est officiis. Quibusdam iure dolor.\nQuo est ut iure cum. Fuga aperiam quasi non in omnis doloribus. Eaque ab dolor consequatur. Esse deleniti reiciendis voluptatibus ut ea.\nSapiente consectetur perferendis omnis voluptatum voluptatibus voluptatum consequatur. Aut veritatis dolor est dolorem quas amet facilis quo. Placeat maiores aperiam praesentium in voluptatum accusantium ducimus itaque porro. Voluptas sit amet aut aut id non omnis. Occaecati corporis repellat est ea nihil deleniti recusandae quis fugit.",
+      "thumbnail_url": "fashion/images/model_1.png",
       "price": 16.0,
-      "stars": 0
+      "inventory": 160,
+      "margin": 0.15,
+      "color": "flower pattern",
+      "size": "100x20x30cm",
+      "stars": 0,
+      "updated_at": "2019-03-10 11:16:09.184106+01:00"
     }
   },
   {
     "model": "fashion.Product",
     "pk": 13,
     "fields": {
-      "label": "Dress Shoes",
-      "image_url": "fashion/images/shoe_5.png",
+      "name": "Dress Shoes",
+      "category": "Shoes and Footwear",
+      "message": "Rerum quis ad tempora nam expedita. Id distinctio numquam tempora quidem repellendus qui et deleniti. Consequatur cumque blanditiis enim veniam voluptas laudantium et. Exercitationem assumenda ut ipsum magni et at rerum possimus. Quos rerum eligendi. Sed eum expedita.\nAt sunt voluptatibus et qui ex dolores. Et voluptate asperiores impedit consequuntur omnis vero nihil velit laboriosam. Nihil voluptatem quidem eligendi asperiores harum quos animi sint. Et magnam labore. Facilis voluptatem ad labore nostrum itaque commodi. Et autem rem ab ea voluptas nulla.\nRepellendus voluptatem suscipit est aut reiciendis saepe labore dolorum aut. Maxime temporibus repellendus asperiores vero. Sed ut voluptatem quibusdam in dolorem ut veritatis qui qui.",
+      "thumbnail_url": "fashion/images/shoe_5.png",
       "price": 78.0,
-      "stars": 5
+      "inventory": 780,
+      "margin": 0.75,
+      "color": "brown",
+      "size": "100x20x30cm",
+      "stars": 5,
+      "updated_at": "2019-03-10 11:16:09.184106+01:00"
     }
   },
   {
     "model": "fashion.Product",
     "pk": 14,
     "fields": {
-      "label": "Easy Day Sweater",
-      "image_url": "fashion/images/cloth_4.png",
+      "name": "Easy Day Sweater",
+      "category": "Shirts and Sweaters",
+      "message": "Eum culpa sit ea commodi est aut. Debitis omnis ut est. Quae earum expedita. Neque voluptas autem repellat dolorem officiis et. Dolor voluptatibus qui explicabo aliquid cupiditate qui tempora qui.\nInventore unde adipisci sit. Eos sunt sit reprehenderit vel facere suscipit. Quia sit illo dolore eveniet est ut tenetur cumque. At beatae dolor aut voluptatem cupiditate non provident quidem. Voluptas optio aut ad. Distinctio iusto qui odio commodi perferendis nisi reiciendis qui quidem.\nFugiat nulla sed dolores quia. Rerum dolore earum fuga repellendus omnis eos. Omnis veniam omnis et. Beatae qui vitae est voluptas tenetur non. Consequatur esse pariatur dolore ab aut vitae et debitis aut. Sit ut sint similique ea vel sint.",
+      "thumbnail_url": "fashion/images/cloth_4.png",
       "price": 45.0,
-      "stars": 4
+      "inventory": 450,
+      "margin": 0.45,
+      "color": "red",
+      "size": "100x20x30cm",
+      "stars": 4,
+      "updated_at": "2019-03-10 11:16:09.184106+01:00"
     }
   },
   {
     "model": "fashion.Product",
     "pk": 15,
     "fields": {
-      "label": "Denim Jacket",
-      "image_url": "fashion/images/model_5.png",
+      "name": "Denim Jacket",
+      "category": "Coats and Jackets",
+      "message": "Dolores nemo doloremque animi commodi labore alias sapiente excepturi. Est aspernatur magnam provident. Libero expedita eius rerum et esse qui. Vel et quia laudantium. Ea quidem suscipit placeat.\nEx quia id. Culpa quibusdam ipsa quibusdam deleniti eveniet ipsum dolores quibusdam. Vero ducimus sed beatae.\nCorrupti voluptas nobis ad pariatur sequi qui occaecati. Dolorum est ipsam facere consequatur sed consequuntur sed quis consequatur. Molestias officia fugiat numquam dicta placeat quam ex neque vel. Similique consequatur tempore quia. Non blanditiis aut assumenda delectus eligendi.",
+      "thumbnail_url": "fashion/images/model_5.png",
       "price": 28.0,
-      "stars": 5
+      "inventory": 280,
+      "margin": 0.25,
+      "color": "navy blue",
+      "size": "100x20x30cm",
+      "stars": 5,
+      "updated_at": "2019-03-10 11:16:09.184106+01:00"
     }
   },
   {
     "model": "fashion.Product",
     "pk": 16,
     "fields": {
-      "label": "Blue Shoe High Heels",
-      "image_url": "fashion/images/shoe_2.png",
+      "name": "Blue Shoe High Heels",
+      "category": "Shoes and Footwear",
+      "message": "Quam qui illo voluptatem blanditiis dolore nam ad. Tenetur tempore omnis distinctio perspiciatis voluptas. Exercitationem molestiae veritatis qui rem aut ipsum iusto ipsum. Expedita voluptatum quo non maiores est optio est. Dolor at repellendus et iusto ut.\nVeniam accusamus dicta ducimus voluptas dolor possimus dolorum nihil dolore. Itaque et excepturi fugiat numquam at. Quo id rerum dolorem ea sit. Saepe praesentium facilis quam. Et est molestiae rerum ducimus praesentium.\nEt minima illum. Enim occaecati eligendi fugiat ipsam qui dolores ut nobis aut. Dolor suscipit eaque repellendus sint debitis voluptates nesciunt. Quisquam temporibus sapiente inventore. Aut debitis voluptatum quis earum quasi cupiditate.",
+      "thumbnail_url": "fashion/images/shoe_2.png",
       "price": 51.0,
-      "stars": 0
+      "inventory": 510,
+      "margin": 0.55,
+      "color": "blue",
+      "size": "100x20x30cm",
+      "stars": 0,
+      "updated_at": "2019-03-10 11:16:09.184106+01:00"
     }
   },
   {
     "model": "fashion.Product",
     "pk": 17,
     "fields": {
-      "label": "Trendy White Bag",
-      "image_url": "fashion/images/bag_3.png",
+      "name": "Trendy White Bag",
+      "category": "Bags and Clutches",
+      "message": "Aspernatur mollitia quo quia. Et esse optio perspiciatis cumque facere molestias et ut est. Et earum voluptatum maiores consectetur et. Ab voluptas distinctio ut nulla quo qui saepe. Voluptatibus animi soluta at esse itaque illo voluptatem magnam.\nNostrum itaque velit officia omnis. Iste rerum exercitationem consectetur corrupti distinctio quisquam ea. Tempora et quia dolorem rerum aut eaque. Nihil unde odio eum exercitationem laboriosam. Occaecati ea odit itaque dicta dolore quis libero.\nVoluptas molestiae ex. Eum temporibus earum et explicabo voluptatem voluptate quis doloremque. Quia impedit non sunt officiis.",
+      "thumbnail_url": "fashion/images/bag_3.png",
       "price": 160.0,
-      "stars": 2
+      "inventory": 11600,
+      "margin": 0.15,
+      "color": "white",
+      "size": "100x20x30cm",
+      "stars": 2,
+      "updated_at": "2019-03-10 11:16:09.184106+01:00"
     }
   },
   {
     "model": "fashion.Product",
     "pk": 18,
     "fields": {
-      "label": "Red Heels",
-      "image_url": "fashion/images/shoe_3.png",
+      "name": "Red Heels",
+      "category": "Shoes and Footwear",
+      "message": "Excepturi quod illo voluptatem saepe minus et nisi quia. Sint at veniam iusto voluptatem dolores voluptates. Facilis sequi vel fugit non. Aspernatur qui saepe nihil. Et et dignissimos ipsam vitae eum officiis. Harum excepturi accusamus consequatur dolorem magni modi ad est.\nIn dolor quis repellendus velit facere asperiores id voluptatem. Enim voluptatibus ullam. Harum quia qui cumque dolor consequuntur et qui.\nCulpa sed praesentium consequatur quos rerum adipisci et. Est occaecati vero enim inventore. Est sequi similique et. Et quo eveniet est odio sit et hic. Quia deleniti doloribus qui voluptatem.",
+      "thumbnail_url": "fashion/images/shoe_3.png",
       "price": 45.0,
-      "stars": 3
+      "inventory": 450,
+      "margin": 0.45,
+      "color": "red",
+      "size": "100x20x30cm",
+      "stars": 3,
+      "updated_at": "2019-03-10 11:16:09.184106+01:00"
     }
   },
   {
     "model": "fashion.Product",
     "pk": 19,
     "fields": {
-      "label": "Aviator Watch",
-      "image_url": "fashion/images/watch_2.png",
+      "name": "Aviator Watch",
+      "category": "Watches and Jewelry",
+      "message": "Nemo non modi ab ut saepe voluptas atque sed. Odio numquam nam architecto et aut suscipit libero id. Rerum non officia libero ut ratione qui sit. Praesentium esse est fuga deleniti voluptate earum voluptas blanditiis laudantium. Iste quasi neque iusto iure labore et ipsum. Temporibus sit placeat ullam hic sed nam nemo.\nSed fuga sit excepturi aut neque facere. Consequuntur error voluptates et qui. Aliquid cumque ea repudiandae non modi sed.\nQuis recusandae est sit rerum alias sunt. Optio omnis ea facere. Eos ex sit et dolorum voluptas expedita non omnis quos. Illum blanditiis eaque ut et totam quas excepturi labore.",
+      "thumbnail_url": "fashion/images/watch_2.png",
       "price": 560.0,
-      "stars": 3
+      "inventory": 15600,
+      "margin": 0.55,
+      "color": "black",
+      "size": "100x20x30cm",
+      "stars": 3,
+      "updated_at": "2019-03-10 11:16:09.184106+01:00"
     }
   },
   {
     "model": "fashion.Product",
     "pk": 20,
     "fields": {
-      "label": "Timeless Watch",
-      "image_url": "fashion/images/watch_3.png",
+      "name": "Timeless Watch",
+      "category": "Watches and Jewelry",
+      "message": "Modi et quia vero. Suscipit illum non impedit iste et. Ut cum ut dolores similique. Omnis accusantium omnis et eos incidunt non ipsam. Doloremque possimus consequatur ea qui iusto impedit nemo sit. Consequatur voluptatum occaecati voluptatum totam recusandae.\nAccusamus culpa omnis dignissimos odit et et iusto. Et rerum inventore sequi inventore quos vel rerum quia. Quia quia et. Dolor sed inventore. Sit ut vitae quisquam enim dolor officia id libero.\nOfficia adipisci dolore nulla libero quia. Et voluptatem unde corporis. Aut dolorem ut rerum nostrum voluptas eos eaque perspiciatis id. Adipisci dolor nisi aliquid sit commodi sunt aut et eum.",
+      "thumbnail_url": "fashion/images/watch_3.png",
       "price": 880.0,
-      "stars": 5
+      "inventory": 18800,
+      "margin": 0.85,
+      "color": "black",
+      "size": "100x20x30cm",
+      "stars": 5,
+      "updated_at": "2019-03-10 11:16:09.184106+01:00"
     }
   },
   {
     "model": "fashion.Product",
     "pk": 21,
     "fields": {
-      "label": "Leather Brown Bag",
-      "image_url": "fashion/images/bag_2.png",
+      "name": "Leather Brown Bag",
+      "category": "Bags and Clutches",
+      "message": "Reprehenderit quis rerum rerum cumque amet qui. At et provident aut corporis sapiente aut non explicabo cumque. Voluptas sequi rem accusamus totam voluptatibus deleniti. Voluptatem occaecati et eligendi nihil.\nFugiat ut est omnis et ea at blanditiis reprehenderit. Autem in adipisci voluptas corrupti. Id tempora nisi temporibus rerum aliquam. Aspernatur qui iste ut fugiat ratione quae neque corporis. Voluptatibus aut ad nihil architecto alias error voluptas veniam.\nVoluptates labore iste cupiditate aperiam accusantium tempora asperiores qui quia. Minima quae magnam modi architecto earum et assumenda. Porro reprehenderit odio. Voluptatem eum velit vitae rerum quia praesentium esse aliquid adipisci.",
+      "thumbnail_url": "fashion/images/bag_2.png",
       "price": 210.0,
-      "stars": 5
+      "inventory": 12100,
+      "margin": 0.25,
+      "color": "brown",
+      "size": "100x20x30cm",
+      "stars": 5,
+      "updated_at": "2019-03-10 11:16:09.184106+01:00"
     }
   },
   {
     "model": "fashion.Product",
     "pk": 22,
     "fields": {
-      "label": "Bespoke Denim",
-      "image_url": "fashion/images/pants_3.png",
+      "name": "Bespoke Denim",
+      "category": "Pants and Legwear",
+      "message": "Molestias praesentium est autem culpa et quo. Minima accusantium ad. Commodi et rerum quibusdam nisi at molestiae non temporibus dolorem. Aspernatur distinctio ipsa et et dolorem aut voluptatum reprehenderit. Qui repudiandae modi cum voluptas. Ullam laudantium voluptatum asperiores nisi amet voluptatem est.\nPraesentium accusamus eius. Hic enim explicabo. Non ut et officiis ut provident atque sit repellat. Nemo incidunt vero quo porro a pariatur quasi cum rerum. Nulla aut saepe sit et fugiat hic sit natus.\nIusto consequatur quis fugiat possimus delectus molestiae laboriosam. Perspiciatis hic non aut ex incidunt eum. Aspernatur odit quibusdam facere odit itaque nihil.",
+      "thumbnail_url": "fashion/images/pants_3.png",
       "price": 55.0,
-      "stars": 4
+      "inventory": 550,
+      "margin": 0.55,
+      "color": "navy blue",
+      "size": "100x20x30cm",
+      "stars": 4,
+      "updated_at": "2019-03-10 11:16:09.184106+01:00"
     }
   },
   {
     "model": "fashion.Product",
     "pk": 23,
     "fields": {
-      "label": "Shaded sleek glasses",
-      "image_url": "fashion/images/glasses_4.png",
+      "name": "Shaded sleek glasses",
+      "category": "Glasses and Eyewear",
+      "message": "Corrupti est pariatur totam tempora doloremque repudiandae rerum inventore facilis. In saepe ullam accusamus eveniet. Dignissimos esse exercitationem et repudiandae sit ipsam velit minus deserunt. Deleniti doloremque qui optio autem doloremque est suscipit error.\nVelit cum sunt in. Sunt non ab provident amet vel similique. Soluta reprehenderit molestias in labore voluptatem. Aut et est.\nEos mollitia voluptatem incidunt iusto sed vel excepturi illo. Et reprehenderit corrupti. Labore ut illum consequatur sapiente omnis quae. Ea ea ex molestiae ducimus debitis possimus. Voluptas fuga velit fugit. Et sint id assumenda exercitationem maiores quia",
+      "thumbnail_url": "fashion/images/glasses_4.png",
       "price": 165.0,
-      "stars": 2
+      "inventory": 11650,
+      "margin": 0.15,
+      "color": "gold",
+      "size": "100x20x30cm",
+      "stars": 2,
+      "updated_at": "2019-03-10 11:16:09.184106+01:00"
     }
   },
   {
     "model": "fashion.Product",
     "pk": 24,
     "fields": {
-      "label": "Gen 3 Smart Watch",
-      "image_url": "fashion/images/watch_4.png",
+      "name": "Gen 3 Smart Watch",
+      "category": "Watches and Jewelry",
+      "message": "Quia non sit illum ratione eum aut eveniet. Dolores eum ut ut repudiandae delectus. Sint esse accusantium eos et necessitatibus fugiat sunt et. Et ducimus aut magni voluptatem quo. Fugit et distinctio.\nEt ipsam accusamus rerum eos quisquam ullam ad harum illo. Earum qui voluptatem laudantium in. Omnis magnam in aspernatur eos quae. Earum aut numquam est blanditiis praesentium a. Eius ducimus nam qui minima consectetur. Illum laboriosam cumque commodi eligendi totam.\nAmet aut eaque laudantium quidem assumenda distinctio ut quo eius. Molestiae hic suscipit ea eligendi et. Sequi neque similique. Sapiente rem rem. Ea sit maiores laboriosam enim expedita. Mollitia voluptatem minima qui sed.",
+      "thumbnail_url": "fashion/images/watch_4.png",
       "price": 130.0,
-      "stars": 3
+      "inventory": 11300,
+      "margin": 0.15,
+      "color": "black",
+      "size": "100x20x30cm",
+      "stars": 3,
+      "updated_at": "2019-03-10 11:16:09.184106+01:00"
     }
   },
   {
     "model": "fashion.Product",
     "pk": 25,
     "fields": {
-      "label": "Techie Watch",
-      "image_url": "fashion/images/watch_5.png",
+      "name": "Techie Watch",
+      "category": "Watches and Jewelry",
+      "message": "Rerum maxime deleniti earum at a dolorem. Sit rem cupiditate molestias molestiae. Hic et ab vitae magnam laborum. Quae in quidem. Sint molestias accusantium. Accusamus molestiae unde quia sed harum.\nVoluptatem facilis est voluptatum rerum fugiat odio et quas nemo. Quos blanditiis tempora magnam consequatur beatae. Quis alias distinctio est ea. Ducimus deleniti beatae tempora unde odio sit. Doloremque doloremque in ipsam rerum quis eius. Porro quo alias voluptas.\nNon nemo veritatis tempora ut et quia. Enim natus voluptatem sunt est voluptatem qui nisi ut asperiores. Odit occaecati ab harum quo. Officiis nihil dolorem dolorem nesciunt quo vitae.",
+      "thumbnail_url": "fashion/images/watch_5.png",
       "price": 60.0,
-      "stars": 3
+      "inventory": 600,
+      "margin": 0.65,
+      "color": "black",
+      "size": "100x20x30cm",
+      "stars": 3,
+      "updated_at": "2019-03-10 11:16:09.184106+01:00"
     }
   },
   {
     "model": "fashion.Product",
     "pk": 26,
     "fields": {
-      "label": "Retro Watch",
-      "image_url": "fashion/images/watch_6.png",
+      "name": "Retro Watch",
+      "category": "Watches and Jewelry",
+      "message": "Rerum perspiciatis aperiam assumenda modi impedit exercitationem assumenda nulla consequatur. Sit praesentium ratione voluptatem libero omnis. Similique optio aliquid eum asperiores assumenda.\nEum est eveniet deleniti aliquid quis. Sint quidem est aut velit cumque molestiae vero eligendi aspernatur. Ut dignissimos aut numquam itaque enim quasi. Cupiditate aut non ut nulla dolorem perspiciatis accusamus facilis aliquam. Et eum praesentium inventore maiores asperiores dolorem alias ea.\nEligendi aut quia et reprehenderit. Aut porro dicta repudiandae sit et dignissimos. Distinctio esse autem deleniti voluptate occaecati. Quia voluptatum distinctio",
+      "thumbnail_url": "fashion/images/watch_6.png",
       "price": 85.0,
-      "stars": 4
+      "inventory": 850,
+      "margin": 0.85,
+      "color": "green",
+      "size": "100x20x30cm",
+      "stars": 4,
+      "updated_at": "2019-03-10 11:16:09.184106+01:00"
     }
   },
   {
     "model": "fashion.Product",
     "pk": 27,
     "fields": {
-      "label": "Airport Bag",
-      "image_url": "fashion/images/bag_4.png",
+      "name": "Airport Bag",
+      "category": "Bags and Clutches",
+      "message": "Eligendi dignissimos dolor qui quod. Occaecati in hic omnis alias deserunt aut doloremque quam aspernatur. Omnis facilis veritatis sapiente. Est culpa dolor possimus nihil facilis sed harum eius. Odit qui eos et. Magni quae occaecati sed et eveniet inventore.\nAb omnis voluptatem ut iusto et. Iusto accusantium sit expedita aliquam. A non et repellendus. Vero occaecati eveniet officia quidem sequi facilis velit. Delectus ab quasi iure ea molestiae voluptate est sit.\nSed et neque aliquid delectus dolores iusto eos blanditiis. Beatae vero et numquam rem recusandae. Doloribus vel blanditiis veritatis ipsam rerum a. Rerum aut sapiente minus iste sunt necessitatibus error eum est. Optio unde eum.",
+      "thumbnail_url": "fashion/images/bag_4.png",
       "price": 185.0,
-      "stars": 5
+      "inventory": 11850,
+      "margin": 0.15,
+      "color": "blue",
+      "size": "100x20x30cm",
+      "stars": 5,
+      "updated_at": "2019-03-10 11:16:09.184106+01:00"
     }
   },
   {
     "model": "fashion.Product",
     "pk": 28,
     "fields": {
-      "label": "Classic Brown Bag",
-      "image_url": "fashion/images/bag_5.png",
+      "name": "Classic Brown Bag",
+      "category": "Bags and Clutches",
+      "message": "Labore vero soluta quia et magni expedita. Vero error deserunt ullam in. Sit qui in quo molestiae dolor sunt.\nDeserunt quibusdam exercitationem. Fuga nam aut in autem. Quae eveniet necessitatibus temporibus.\nEt praesentium tenetur voluptatibus praesentium tempore fuga facere. Quia nostrum assumenda aut nulla porro autem delectus est. Ut provident vero. Sapiente a et tempora error itaque eum quam eius nisi.",
+      "thumbnail_url": "fashion/images/bag_5.png",
       "price": 160.0,
-      "stars": 2
+      "inventory": 11600,
+      "margin": 0.15,
+      "color": "brown",
+      "size": "100x20x30cm",
+      "stars": 2,
+      "updated_at": "2019-03-10 11:16:09.184106+01:00"
     }
   },
   {
     "model": "fashion.Product",
     "pk": 29,
     "fields": {
-      "label": "Over Shoulder Bag",
-      "image_url": "fashion/images/bag_6.png",
+      "name": "Over Shoulder Bag",
+      "category": "Bags and Clutches",
+      "message": "Quam consectetur nemo vitae molestias minima est. Omnis quo rerum quae sint labore. Perferendis molestias dolor quibusdam animi accusantium enim necessitatibus.\nNesciunt sit doloribus corrupti aut. Odio sed et. Minus quia recusandae sequi saepe fugiat maxime. Ipsa facilis aspernatur quidem.\nDucimus impedit laborum est qui eius voluptas voluptates dolores veritatis. Ducimus voluptas rerum ab et et. Inventore deleniti libero eos ut voluptatum asperiores est odit quod. Asperiores ipsa sed soluta est aliquid.",
+      "thumbnail_url": "fashion/images/bag_6.png",
       "price": 120.0,
-      "stars": 5
+      "inventory": 11200,
+      "margin": 0.15,
+      "color": "beige",
+      "size": "100x20x30cm",
+      "stars": 5,
+      "updated_at": "2019-03-10 11:16:09.184106+01:00"
     }
   },
   {
     "model": "fashion.Product",
     "pk": 30,
     "fields": {
-      "label": "Classic Monotone Watch",
-      "image_url": "fashion/images/watch_7.png",
+      "name": "Classic Monotone Watch",
+      "category": "Watches and Jewelry",
+      "message": "Eum impedit minus dignissimos minima rerum doloribus aut tempora facilis. Quibusdam sapiente odit aspernatur voluptate porro perspiciatis. Consequatur optio qui et magnam animi nemo. Laboriosam quia ea provident iure ipsum. Aut et labore ullam provident distinctio fuga modi quia.\nUt eum natus fugit recusandae similique dolorem esse autem qui. Soluta et totam quos. Aut qui facere asperiores. Doloremque reiciendis ea aut est asperiores explicabo sit. Quasi porro debitis est qui voluptatibus.\nOfficiis et vitae voluptatem et. Non nulla optio enim. Ratione repellat inventore et ipsam voluptates voluptate ut.",
+      "thumbnail_url": "fashion/images/watch_7.png",
       "price": 355.0,
-      "stars": 4
+      "inventory": 13550,
+      "margin": 0.35,
+      "color": "black",
+      "size": "100x20x30cm",
+      "stars": 4,
+      "updated_at": "2019-03-10 11:16:09.184106+01:00"
     }
   },
   {
     "model": "fashion.Product",
     "pk": 31,
     "fields": {
-      "label": "Light Weight Sneakers",
-      "image_url": "fashion/images/shoe_6.png",
+      "name": "Light Weight Sneakers",
+      "category": "Shoes and Footwear",
+      "message": "Dignissimos soluta sed harum vero vel voluptas. Sed deserunt aut consequatur dolor non nostrum praesentium amet vitae. Numquam omnis necessitatibus nihil qui facilis quasi quas. Alias eveniet fugit asperiores non non eum quas consequuntur culpa. Aut suscipit voluptates sed qui quia magnam. Necessitatibus eveniet ut eveniet illum.\nCumque voluptas eaque voluptatibus. Error quia id corrupti quia esse corporis. Nostrum odio alias quis. Possimus officiis quia blanditiis consectetur eveniet ut provident.\nQuam iusto ut ut eum quas qui quis. Ut aperiam itaque et provident. Beatae facere ad dignissimos vitae.",
+      "thumbnail_url": "fashion/images/shoe_6.png",
       "price": 155.0,
-      "stars": 4
+      "inventory": 11550,
+      "margin": 0.15,
+      "color": "grey",
+      "size": "100x20x30cm",
+      "stars": 4,
+      "updated_at": "2019-03-10 11:16:09.184106+01:00"
     }
   },
   {
     "model": "fashion.Product",
     "pk": 32,
     "fields": {
-      "label": "Night Out Yellow Heels",
-      "image_url": "fashion/images/shoe_7.png",
+      "name": "Night Out Yellow Heels",
+      "category": "Shoes and Footwear",
+      "message": "Reprehenderit eum reprehenderit doloremque dolores ipsa repellendus maiores unde. Laboriosam deserunt vel perspiciatis. Dignissimos enim possimus cumque non.\nVel ipsam ut laborum eos. Amet in aut incidunt fugiat nihil ratione quia id. Magnam sint velit dignissimos mollitia labore sequi. Exercitationem aliquam non aut saepe ut consequuntur ut atque assumenda. Sequi molestiae vero. Ipsum soluta quod.\nEaque ipsa incidunt iure culpa nam laborum. Ipsa adipisci quis delectus nostrum et aut voluptate non sunt. Enim ullam deserunt dolor enim. Quia minus officiis atque voluptatem tenetur. Modi modi ipsa vero quo rem labore accusamus dolorem distinctio.",
+      "thumbnail_url": "fashion/images/shoe_7.png",
       "price": 155.0,
-      "stars": 2
+      "inventory": 11550,
+      "margin": 0.15,
+      "color": "yellow",
+      "size": "100x20x30cm",
+      "stars": 2,
+      "updated_at": "2019-03-10 11:16:09.184106+01:00"
     }
   },
   {
     "model": "fashion.Product",
     "pk": 33,
     "fields": {
-      "label": "Night Out Pink Heels",
-      "image_url": "fashion/images/shoe_8.png",
+      "name": "Night Out Pink Heels",
+      "category": "Shoes and Footwear",
+      "message": "Et voluptas quia est vero id veritatis et. Et voluptate doloribus et. Praesentium omnis at qui. Illo aut omnis.\nIllo aut commodi quos laboriosam. Omnis voluptates ipsum enim voluptatum ratione saepe. Delectus tempore non. Libero rerum magni temporibus omnis deleniti.\nDolore repudiandae aliquam. Adipisci reiciendis impedit consectetur neque aut et. Quae voluptatem dolor facere rerum. Corporis velit unde quo.",
+      "thumbnail_url": "fashion/images/shoe_8.png",
       "price": 155.0,
-      "stars": 5
+      "inventory": 11550,
+      "margin": 0.15,
+      "color": "pink",
+      "size": "100x20x30cm",
+      "stars": 5,
+      "updated_at": "2019-03-10 11:16:09.184106+01:00"
     }
   },
   {
     "model": "fashion.Product",
     "pk": 34,
     "fields": {
-      "label": "Special Lens Glasses",
-      "image_url": "fashion/images/glasses_4.png",
+      "name": "Special Lens Glasses",
+      "category": "Glasses and Eyewear",
+      "message": "Molestiae mollitia culpa sequi fuga similique necessitatibus officia iusto. Dolorem eum modi ipsum ut qui. Ipsa omnis aut amet. Sed fugit ea voluptas. Magni sit et voluptatem voluptatem omnis animi sequi dolore voluptatem.\nUt qui maxime. Delectus et quos facere blanditiis aut repellendus voluptas quia aliquam. Id sunt suscipit aliquam.\nOdit unde accusamus veritatis sed. Consectetur velit officia ipsa dicta. Est non libero sit. Enim dolores sequi accusantium nisi eum cupiditate ea.",
+      "thumbnail_url": "fashion/images/glasses_4.png",
       "price": 105.0,
-      "stars": 4
+      "inventory": 11050,
+      "margin": 0.15,
+      "color": "gold",
+      "size": "100x20x30cm",
+      "stars": 4,
+      "updated_at": "2019-03-10 11:16:09.184106+01:00"
     }
   },
   {
     "model": "fashion.Product",
     "pk": 35,
     "fields": {
-      "label": "Trend Glasses",
-      "image_url": "fashion/images/glasses_5.png",
+      "name": "Trend Glasses",
+      "category": "Glasses and Eyewear",
+      "message": "Ipsam inventore consequatur iusto. Eos eos officia voluptatibus quo possimus illum qui eaque similique. Neque cumque autem odio. Aperiam modi saepe similique repellat beatae qui ratione ipsam.\nConsequatur quod eaque repudiandae voluptatem deserunt consectetur laboriosam rerum. Et nulla id et sapiente amet voluptatibus praesentium perspiciatis eos. Incidunt autem at.\nVoluptas quaerat a quia et eligendi sed dicta accusantium a. Earum autem quasi voluptates odit. Dolorem voluptas est.",
+      "thumbnail_url": "fashion/images/glasses_5.png",
       "price": 110.0,
-      "stars": 4
+      "inventory": 11100,
+      "margin": 0.15,
+      "color": "blue",
+      "size": "100x20x30cm",
+      "stars": 4,
+      "updated_at": "2019-03-10 11:16:09.184106+01:00"
     }
   },
   {
     "model": "fashion.Product",
     "pk": 36,
     "fields": {
-      "label": "Hipster Glasses",
-      "image_url": "fashion/images/glasses_6.png",
+      "name": "Hipster Glasses",
+      "category": "Glasses and Eyewear",
+      "message": "Quia quam nulla eveniet nobis minima non distinctio non aspernatur. Aut et nihil molestias. Et est consequuntur nemo in. Maxime eos enim. Quae impedit labore iste in natus vitae repellendus. Beatae culpa quis.\nVoluptas sunt illum ad eius iure quasi nesciunt ipsam consequatur. Eligendi neque rerum ipsam corporis iste. Sit enim vitae autem provident molestias maxime quis. Maxime eos suscipit omnis dolorem minus accusantium illum debitis ut. Placeat delectus id quia blanditiis voluptas nobis explicabo.\nQui ut dolor minus perferendis iste. Voluptatem facilis qui deserunt iure dicta ut quia. Quis laboriosam aut aspernatur. Et eligendi aut dolor natus mollitia.",
+      "thumbnail_url": "fashion/images/glasses_6.png",
       "price": 140.0,
-      "stars": 4
+      "inventory": 11400,
+      "margin": 0.15,
+      "color": "silver",
+      "size": "100x20x30cm",
+      "stars": 4,
+      "updated_at": "2019-03-10 11:16:09.184106+01:00"
     }
   },
   {
     "model": "fashion.Product",
     "pk": 36,
     "fields": {
-      "label": "Red Business Glasses",
-      "image_url": "fashion/images/glasses_6.png",
+      "name": "Red Business Glasses",
+      "category": "Glasses and Eyewear",
+      "message": "Esse ducimus laudantium laborum accusamus omnis autem quis. Ut assumenda nihil mollitia doloremque ea est natus pariatur et. Quia eos et soluta corporis voluptatibus aut voluptatem odit est.\nPlaceat dolore nisi. Et est aut itaque dolorem minima ea dolorum suscipit. Quis eveniet nemo consequuntur incidunt eos iusto beatae. A et illo.\nLaboriosam tenetur nam amet ut iste odit aut rerum. Voluptates ratione id eum est ut quidem reiciendis aut occaecati. Velit aut ut itaque eum sint quos sed nihil aut. Ut laudantium perferendis minima culpa unde sed tempora sunt provident. Aut sapiente repellat velit voluptas dignissimos quis doloribus cumque non. Consequuntur fuga nihil dolorem quia aut optio totam sit.",
+      "thumbnail_url": "fashion/images/glasses_6.png",
       "price": 125.0,
-      "stars": 4
+      "inventory": 11250,
+      "margin": 0.15,
+      "color": "red",
+      "size": "100x20x30cm",
+      "stars": 4,
+      "updated_at": "2019-03-10 11:16:09.184106+01:00"
     }
   }
 ]
