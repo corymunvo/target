@@ -132,7 +132,7 @@ jQuery(document).ready(function($) {
 
 
 	var sitePlusMinus = function() {
-		$('.js-btn-minus').on('click', function(e){
+		$('#js-btn-minus').on('click', function(e){
 			e.preventDefault();
 			if ( $(this).closest('.input-group').find('.form-control').val() != 1  ) {
 				var new_val = parseInt($(this).closest('.input-group').find('.form-control').val()) - 1
@@ -141,13 +141,13 @@ jQuery(document).ready(function($) {
 				$(this).closest('.input-group').find('.form-control').val(parseInt(1));
 			}
 		});
-		$('.js-btn-plus').on('click', function(e){
+		$('#js-btn-plus').on('click', function(e){
 			e.preventDefault();
 			var new_val = parseInt($(this).closest('.input-group').find('.form-control').val()) + 1
 			$(this).closest('.input-group').find('.form-control').val(Math.min(new_val, 100));
 		});
 	};
-	// sitePlusMinus();
+	sitePlusMinus();
 
 
 	var siteSliderRange = function() {
