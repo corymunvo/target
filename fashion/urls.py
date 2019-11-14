@@ -15,6 +15,9 @@ urlpatterns = [
     path('thankyou.html', views.thankyou, name='thankyou'),
     path('sign-up.html', views.signUp, name='signUp'),
     path('products.csv', views.csvProducts, name='csvProducts'),
-    
+    path('cart/delete/<int:cart_id>', views.deleteFromCart, name='cartDelete'),
+    path('cart/increment/<int:cart_id>', views.incrementCartItem, name='cartIncrement'),
+    path('cart/decrement/<int:cart_id>', views.decrementCartItem, name='cartDecrement'),
+
     path('<int:product_id>/shop-single.html', views.shopSingle, name='shopSingle'),
 ]

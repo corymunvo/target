@@ -1,5 +1,22 @@
-{% extends 'fashion/base.html' %} {% load static %} {% block content %}
+{% extends 'fashion/base.html' %} {% load static %} {% block content %}{% load fashion_extras %}
+<script>
+  var increment = function(id) {
+    var curQuantity = document.getElementById(`quantity-for-${id}`).value
 
+    if (!curQuantity < 100) {
+      window.location.replace(`/fashion/cart/increment/${id}`)
+    }
+  }
+
+  var decrement = function(id) {
+    var curQuantity = document.getElementById(`quantity-for-${id}`).value
+
+    if (curQuantity > 1) {
+      window.location.replace(`/fashion/cart/decrement/${id}`)
+    }
+  }
+
+</script>
 <div class="bg-light py-3">
   <div class="container">
     <div class="row">
@@ -11,6 +28,15 @@
 
 <div class="site-section">
   <div class="container">
+
+    {% if cart|length == 0 %}
+    <div class="row mb-5 justify-content-md-center">
+      <h1> Your cart is empty!</h1>
+    </div>
+    <div class="row mb-5 justify-content-md-center">
+        <p>Click <a href="{% url 'shop' %}">here</a> to continue shopping.</p>
+    </div>
+    {% else %}
     <div class="row mb-5">
       <form class="col-md-12" method="post">
         <div class="site-blocks-table">
@@ -26,55 +52,32 @@
               </tr>
             </thead>
             <tbody>
+              {% for item in cart %}
               <tr>
                 <td class="product-thumbnail">
-                  <img src="{% static "fashion/images/cloth_1.jpg" %}" alt="Image" class="img-fluid">
+                  <img src="{% static item.product.thumbnail_url %}" alt="Image" class="img-fluid">
                 </td>
                 <td class="product-name">
-                  <h2 class="h5 text-black">Top Up T-Shirt</h2>
+                  <h2 class="h5 text-black">{{ item.product.name }}</h2>
                 </td>
-                <td>$49.00</td>
+                <td>{{ item.product.price }}</td>
                 <td>
                   <div class="input-group mb-3" style="max-width: 120px;">
                     <div class="input-group-prepend">
-                      <button class="btn btn-outline-primary js-btn-minus" type="button">&minus;</button>
+                      <button onclick="decrement({{item.id}})" class="btn btn-outline-primary js-btn-minus" type="button">&minus;</button>
                     </div>
-                    <input type="text" class="form-control text-center" value="1" placeholder=""
+                    <input id="quantity-for-{{item.id}}" type="text" class="form-control text-center" value="{{ item.quantity }}" placeholder=""
                       aria-label="Example text with button addon" aria-describedby="button-addon1">
                     <div class="input-group-append">
-                      <button class="btn btn-outline-primary js-btn-plus" type="button">&plus;</button>
+                      <button onclick="increment({{item.id}})" class="btn btn-outline-primary js-btn-plus" type="button">&plus;</button>
                     </div>
                   </div>
 
                 </td>
-                <td>$49.00</td>
-                <td><a href="#" class="btn btn-primary height-auto btn-sm">X</a></td>
+                <td>{% multiply item.quantity item.product.price %}</td>
+                <td><a href="/fashion/cart/delete/{{ item.id }}" class="btn btn-primary height-auto btn-sm">X</a></td>
               </tr>
-
-              <tr>
-                <td class="product-thumbnail">
-                  <img src="{% static "fashion/images/cloth_2.jpg" %}" alt="Image" class="img-fluid">
-                </td>
-                <td class="product-name">
-                  <h2 class="h5 text-black">Polo Shirt</h2>
-                </td>
-                <td>$49.00</td>
-                <td>
-                  <div class="input-group mb-3" style="max-width: 120px;">
-                    <div class="input-group-prepend">
-                      <button class="btn btn-outline-primary js-btn-minus" type="button">&minus;</button>
-                    </div>
-                    <input type="text" class="form-control text-center" value="1" placeholder=""
-                      aria-label="Example text with button addon" aria-describedby="button-addon1">
-                    <div class="input-group-append">
-                      <button class="btn btn-outline-primary js-btn-plus" type="button">&plus;</button>
-                    </div>
-                  </div>
-
-                </td>
-                <td>$49.00</td>
-                <td><a href="#" class="btn btn-primary height-auto btn-sm">X</a></td>
-              </tr>
+              {% endfor %}
             </tbody>
           </table>
         </div>
@@ -84,11 +87,13 @@
     <div class="row">
       <div class="col-md-6">
         <div class="row mb-5">
-          <div class="col-md-6 mb-3 mb-md-0">
+          <!-- <div class="col-md-6 mb-3 mb-md-0">
             <button class="btn btn-primary btn-sm btn-block">Update Cart</button>
-          </div>
+          </div> -->
           <div class="col-md-6">
+            <a href="{% url 'shop' %}">
             <button class="btn btn-outline-primary btn-sm btn-block">Continue Shopping</button>
+          </a>
           </div>
         </div>
         <div class="row">
@@ -117,7 +122,7 @@
                 <span class="text-black">Subtotal</span>
               </div>
               <div class="col-md-6 text-right">
-                <strong class="text-black">$230.00</strong>
+                <strong class="text-black">{{ subtotal }}</strong>
               </div>
             </div>
             <div class="row mb-5">
@@ -125,7 +130,7 @@
                 <span class="text-black">Total</span>
               </div>
               <div class="col-md-6 text-right">
-                <strong class="text-black">$230.00</strong>
+                <strong class="text-black">{{ total }}</strong>
               </div>
             </div>
 
@@ -139,6 +144,8 @@
         </div>
       </div>
     </div>
+
+    {% endif %}
   </div>
 </div>
 {% endblock %}

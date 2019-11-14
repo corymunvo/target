@@ -1,10 +1,12 @@
 from django import forms
+from django.forms import ModelForm
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django_countries.fields import CountryField
 from django_countries.widgets import CountrySelectWidget
-
 from phonenumber_field.formfields import PhoneNumberField
+
+from .models import Cart
 
 
 class SignUpForm(UserCreationForm):
@@ -20,3 +22,9 @@ class SignUpForm(UserCreationForm):
         model = User
         fields = ('username', 'email', 'password1', 'password2', 'first_name', 'last_name', 'company', 'address_line_one', 'address_line_two', 'phone', 'country' )
         widgets = {'country': CountrySelectWidget()}
+
+  
+class CartForm(ModelForm):
+    class Meta:
+        model = Cart
+        fields = ['quantity', 'product']

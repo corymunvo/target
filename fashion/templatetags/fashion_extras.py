@@ -17,3 +17,9 @@ def remove_newlines(text):
 remove_newlines.is_safe = True
 remove_newlines = stringfilter(remove_newlines)
 register.filter(remove_newlines)
+
+@register.simple_tag()
+def multiply(qty, unit_price):
+    # you would need to do any localization of the result here
+    return qty * unit_price
+

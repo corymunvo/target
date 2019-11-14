@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import Product, Profile
+from .models import Product, Profile, Cart
 
 class ProductAdmin(admin.ModelAdmin):
     fields = ['name', 'thumbnail_url', 'price', 'stars']
@@ -16,3 +16,8 @@ class ProfileAdmin(admin.ModelAdmin):
 admin.site.register(Profile,  ProfileAdmin)
 
 
+class CartAdmin(admin.ModelAdmin):
+    fields = ['quantity', 'product', 'user']
+    list_display = ('quantity', 'product', 'user')
+
+admin.site.register(Cart,  CartAdmin)

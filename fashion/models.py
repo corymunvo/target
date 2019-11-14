@@ -5,6 +5,7 @@ from django.views import generic
 from django.contrib.auth.models import User
 from django_countries.fields import CountryField
 from phonenumber_field.modelfields import PhoneNumberField
+from django.conf import settings
 
 
 class Product(models.Model):
@@ -22,14 +23,8 @@ class Product(models.Model):
     stars = models.SmallIntegerField()
 
 
-# class Cart(models.Model):
-#     question = models.ForeignKey(Question, on_delete=models.CASCADE)
-#     choice_text = models.CharField(max_length=200)
-#     votes = models.IntegerField(default=0)
-
-
 class Profile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.OneToOneField(  settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     first_name = models.TextField(max_length=40, blank=True)
     last_name = models.TextField(max_length=40, blank=True)
     company = models.TextField(max_length=100, blank=True)
@@ -37,3 +32,9 @@ class Profile(models.Model):
     address_line_two = models.TextField(max_length=100, blank=True)
     phone =  PhoneNumberField()
     country = CountryField(blank_label='Select a country')
+
+
+class Cart(models.Model):
+    quantity =  models.IntegerField(default=0)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)

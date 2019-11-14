@@ -69,11 +69,11 @@
         <div class="row mb-5">
           {% for product in products %}
           <div class="col-lg-6 col-md-6 item-entry mb-4">
-            <a href="#" class="product-item md-height bg-gray d-block">
+            <a href="/fashion/{{ product.id }}/shop-single.html" class="product-item md-height bg-gray d-block">
               <img src="{% static product.thumbnail_url %}" alt="Image" class="img-fluid">
             </a>
             <h2 class="item-title">
-              <a href="#">{{ product.name }}</a>
+              <a href="/fashion/{{ product.id }}/shop-single.html">{{ product.name }}</a>
             </h2>
             <strong class="item-price">${{ product.price }}</strong>
             {% if product.stars > 0 %}

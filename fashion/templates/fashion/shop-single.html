@@ -1,13 +1,15 @@
 {% extends 'fashion/base.html' %} {% load static %} {% block content %}
-   
+
 
 <div class="bg-light py-3">
   <div class="container">
     <div class="row">
-      <div class="col-md-12 mb-0"><a href="{% url 'index'%}">Home</a> <span class="mx-2 mb-0">/</span> <a href="{% url 'shop'%}">Shop</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Gray Shoe</strong></div>
+      <div class="col-md-12 mb-0"><a href="{% url 'index'%}">Home</a> <span class="mx-2 mb-0">/</span> <a
+          href="{% url 'shop'%}">Shop</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Gray Shoe</strong>
+      </div>
     </div>
   </div>
-</div>  
+</div>
 
 <div class="site-section">
   <div class="container">
@@ -18,41 +20,52 @@
             <img src="{% static product.thumbnail_url %}" alt="Image" class="img-fluid">
           </a>
         </div>
-
       </div>
-      <div class="col-md-6">
-        <h2 class="text-black">{{product.name}}</h2>
-        <div class="spaced">{{product.message|linebreaks}}</div>
-        <p><strong class="text-primary h4">${{product.price}}</strong></p>
-        <div class="mb-1 d-flex">
-          <label for="option-sm" class="d-flex mr-3 mb-3">
-            <span class="d-inline-block mr-2" style="top:-2px; position: relative;"><input type="radio" id="option-sm" name="shop-sizes"></span> <span class="d-inline-block text-black">Small</span>
-          </label>
-          <label for="option-md" class="d-flex mr-3 mb-3">
-            <span class="d-inline-block mr-2" style="top:-2px; position: relative;"><input type="radio" id="option-md" name="shop-sizes"></span> <span class="d-inline-block text-black">Medium</span>
-          </label>
-          <label for="option-lg" class="d-flex mr-3 mb-3">
-            <span class="d-inline-block mr-2" style="top:-2px; position: relative;"><input type="radio" id="option-lg" name="shop-sizes"></span> <span class="d-inline-block text-black">Large</span>
-          </label>
-          <label for="option-xl" class="d-flex mr-3 mb-3">
-            <span class="d-inline-block mr-2" style="top:-2px; position: relative;"><input type="radio" id="option-xl" name="shop-sizes"></span> <span class="d-inline-block text-black"> Extra Large</span>
-          </label>
-        </div>
-        <div class="mb-5">
-          <div class="input-group mb-3" style="max-width: 120px;">
-          <div class="input-group-prepend">
-            <button class="btn btn-outline-primary js-btn-minus" type="button">&minus;</button>
+
+        <div class="col-md-6">
+            <form method="post" action="{% url 'cart' %}">
+                {% csrf_token %}
+          <h2 class="text-black">{{product.name}}</h2>
+          <div class="spaced">{{product.message|linebreaks}}</div>
+          <p><strong class="text-primary h4">${{product.price}}</strong></p>
+          <div class="mb-1 d-flex">
+            <label for="option-sm" class="d-flex mr-3 mb-3">
+              <span class="d-inline-block mr-2" style="top:-2px; position: relative;"><input type="radio" id="option-sm"
+                  name="shop-sizes"></span> <span class="d-inline-block text-black">Small</span>
+            </label>
+            <label for="option-md" class="d-flex mr-3 mb-3">
+              <span class="d-inline-block mr-2" style="top:-2px; position: relative;"><input type="radio" id="option-md"
+                  name="shop-sizes"></span> <span class="d-inline-block text-black">Medium</span>
+            </label>
+            <label for="option-lg" class="d-flex mr-3 mb-3">
+              <span class="d-inline-block mr-2" style="top:-2px; position: relative;"><input type="radio" id="option-lg"
+                  name="shop-sizes"></span> <span class="d-inline-block text-black">Large</span>
+            </label>
+            <label for="option-xl" class="d-flex mr-3 mb-3">
+              <span class="d-inline-block mr-2" style="top:-2px; position: relative;"><input type="radio" id="option-xl"
+                  name="shop-sizes"></span> <span class="d-inline-block text-black"> Extra Large</span>
+            </label>
           </div>
-          <input type="text" class="form-control text-center" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
-          <div class="input-group-append">
-            <button class="btn btn-outline-primary js-btn-plus" type="button">&plus;</button>
+          <div class="mb-5">
+            <div class="input-group mb-3" style="max-width: 120px;">
+              <div class="input-group-prepend">
+                <button class="btn btn-outline-primary js-btn-minus" type="button">&minus;</button>
+              </div>
+    
+              <input name="{{ form.quantity.html_name }}" type="text" class="form-control text-center" value="1"
+                placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" min="1" max="100">
+              <div class="input-group-append">
+                <button class="btn btn-outline-primary js-btn-plus" type="button">&plus;</button>
+              </div>
+            </div>
+
           </div>
-        </div>
+          <input type="hidden" name="{{ form.product.html_name }}"" value="{{product.id}}">
+
+          <p><button type="submit" class="buy-now btn btn-sm height-auto px-4 py-3 btn-primary">Add To Cart</button></p>
+        </form>
 
         </div>
-        <p><a href="{% url 'cart' %}" class="buy-now btn btn-sm height-auto px-4 py-3 btn-primary">Add To Cart</a></p>
-
-      </div>
     </div>
   </div>
 </div>
