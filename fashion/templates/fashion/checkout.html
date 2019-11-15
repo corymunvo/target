@@ -173,21 +173,21 @@
                   <th>Total</th>
                 </thead>
                 <tbody>
+                  {% for item in cart %}
+
                   <tr>
-                    <td>Top Up T-Shirt <strong class="mx-2">x</strong> 1</td>
-                    <td>$250.00</td>
+                    <td>{{ item.product.name }} <strong class="mx-2">x</strong> {{ item.quantity }}</td>
+                    <td>{{ item.product.price }}</td>
                   </tr>
-                  <tr>
-                    <td>Polo Shirt <strong class="mx-2">x</strong> 1</td>
-                    <td>$100.00</td>
-                  </tr>
+                  {% endfor %}
+
                   <tr>
                     <td class="text-black font-weight-bold"><strong>Cart Subtotal</strong></td>
-                    <td class="text-black">$350.00</td>
+                    <td class="text-black">{{ subtotal }}</td>
                   </tr>
                   <tr>
                     <td class="text-black font-weight-bold"><strong>Order Total</strong></td>
-                    <td class="text-black font-weight-bold"><strong>$350.00</strong></td>
+                    <td class="text-black font-weight-bold"><strong>{{ total }}</strong></td>
                   </tr>
                 </tbody>
               </table>

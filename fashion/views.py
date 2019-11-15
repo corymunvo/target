@@ -30,6 +30,10 @@ def get_user_cart(user):
     context = {'cart': cart, 'subtotal': subtotal, 'total': total }
     return context
 
+def clear_cart(user):
+    cart = Cart.objects.filter(user=user).delete()
+    
+
 def index(request):
     context = paginate_products(request, 'id')
     return render(request, 'fashion/index.html', context)
@@ -76,7 +80,14 @@ def cart(request):
 
 @login_required
 def checkout(request):
-    return render(request, 'fashion/checkout.html')
+    context = get_user_cart(request.user)
+    return render(request, 'fashion/checkout.html', context)
+
+@login_required
+def thank_you(request):
+    clear_cart(request.user)
+    return render(request, 'fashion/thankyou.html')
+
 
 
 def contact(request):
@@ -91,10 +102,6 @@ def shop(request):
 def arrivals(request):
     context = paginate_products(request, 'updated_at')
     return render(request, 'fashion/arrivals.html', context)
-
-
-def thank_you(request):
-    return render(request, 'fashion/thankyou.html')
 
 
 @transaction.atomic
