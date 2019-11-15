@@ -1,13 +1,14 @@
 import csv
 from django.shortcuts import render, redirect
 from django.core.paginator import Paginator
-from .forms import SignUpForm, CartForm
+from .forms import  ProfileForm, CartForm, UserCreationForm
 from django.contrib.auth import login, authenticate
 from django.http import HttpResponse
 from django.template import loader
 from django.contrib.auth.decorators import login_required
 from decimal import *
 from .models import Product, Cart
+from django.db import transaction
 
 def clamp(n, smallest, largest): return max(smallest, min(n, largest))
 
@@ -43,17 +44,17 @@ def catalogue(request):
     return render(request, 'fashion/catalogue.html', context)
 
 
-def deleteFromCart(request, cart_id):
+def delete_from_cart(request, cart_id):
     Cart.objects.filter(pk=cart_id, user=request.user).delete()
     return redirect('cart')
 
-def incrementCartItem(request, cart_id):
+def increment_cart_item(request, cart_id):
     cart_item = Cart.objects.filter(pk=cart_id, user=request.user).first()
     cart_item.quantity = clamp(cart_item.quantity + 1, 1,100)
     cart_item.save()
     return redirect('cart')
 
-def decrementCartItem(request, cart_id):
+def decrement_cart_item(request, cart_id):
     cart_item = Cart.objects.filter(pk=cart_id, user=request.user).first()
     cart_item.quantity = clamp(cart_item.quantity - 1, 1,100)
     cart_item.save()
@@ -75,8 +76,7 @@ def cart(request):
 
 @login_required
 def checkout(request):
-    form = SignUpForm()
-    return render(request, 'fashion/checkout.html', {'form': form})
+    return render(request, 'fashion/checkout.html')
 
 
 def contact(request):
@@ -93,41 +93,43 @@ def arrivals(request):
     return render(request, 'fashion/arrivals.html', context)
 
 
-def thankyou(request):
+def thank_you(request):
     return render(request, 'fashion/thankyou.html')
 
 
-def signUp(request):
+@transaction.atomic
+def sign_up(request):
     if request.method == 'POST':
-        form = SignUpForm(request.POST)
-        if form.is_valid():
-            user = form.save()
-            user.refresh_from_db()  # load the profile instance created by the signal
-            user.profile.first_name = form.cleaned_data.get('first_name')
-            user.profile.last_name = form.cleaned_data.get('last_name')
-            user.profile.company = form.cleaned_data.get('company')
-            user.profile.address_line_one = form.cleaned_data.get('address_line_one')
-            user.profile.address_line_two = form.cleaned_data.get('address_line_two')
-            user.profile.phone = form.cleaned_data.get('phone')
-            user.profile.country = form.cleaned_data.get('country')
-            user.save()
-            raw_password = form.cleaned_data.get('password1')
+        user_form = UserCreationForm(request.POST)
+        profile_form = ProfileForm(request.POST)
+        if user_form.is_valid() and profile_form.is_valid():
+            user = user_form.save()
+            user.refresh_from_db()
+            profile_form = ProfileForm(request.POST, instance=user.profile)
+            profile_form.save()
+            raw_password = user_form.cleaned_data.get('password1')
             user = authenticate(username=user.username, password=raw_password)
             login(request, user)
-            return redirect('index')
+            return redirect('/')    
+
     else:
-        form = SignUpForm()
+        user_form = UserCreationForm()
+        profile_form = ProfileForm()
 
-    return render(request, 'fashion/sign-up.html', {'form': form})
+    return render(request, 'fashion/sign-up.html', {
+        'user_form': user_form,
+        'profile_form': profile_form
+    })
 
 
-def shopSingle(request, product_id):
+
+def shop_single(request, product_id):
     product = Product.objects.get(pk=product_id)
     form = CartForm({'product': product_id})
     return render(request, 'fashion/shop-single.html', {'product': product, 'form': form})
 
 
-def csvProducts(request):
+def csv_products(request):
     # Create the HttpResponse object with the appropriate CSV header.
     response = HttpResponse(content_type='text/csv')
     response['Content-Disposition'] = 'attachment; filename="products.csv"'

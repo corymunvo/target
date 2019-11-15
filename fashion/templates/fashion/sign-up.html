@@ -12,108 +12,112 @@
         <div class="p-3 p-lg-5 border">
           <form method="post">
             {% csrf_token %}
-            {{ form.non_field_errors }}
+            {{ profile_form.non_field_errors }}
 
             <div class="form-group row">
               <div class="col-md-12">
-                <label for="{{ form.username.id_for_label }}" class="text-black">Username
+                <label for="{{ user_form.username.id_for_label }}" class="text-black">Username
                 </label>
-                <input class="form-control" id="{{ form.username.id_for_label }}" name="{{ form.username.html_name }}"
-                type="text" />
-                <span class="text-danger">{{ form.username.errors }}</span>
+                <input class="form-control" id="{{ user_form.username.id_for_label }}" name="{{ user_form.username.html_name }}"
+                type="text" value="{{user_form.username.value|default_if_none:""}}"/>
+                <span class="text-danger">{{ user_form.username.errors }}</span>
               </div>
             </div>
 
             <div class="form-group row">
               <div class="col-md-12">
-                <label for="{{ form.password1.id_for_label }}" class="text-black">Password
+                <label for="{{ user_form.password1.id_for_label }}" class="text-black">Password
                 </label>
-                <input class="form-control" id="{{ form.password1.id_for_label }}" name="{{ form.password1.html_name }}"
+                <input class="form-control" id="{{ user_form.password1.id_for_label }}" name="{{ user_form.password1.html_name }}"
                 type="password" />
-                <span class="text-danger">{{ form.password1.errors }}</span>
+                <span class="text-danger">{{ user_form.password1.errors }}</span>
               </div>
             </div>
 
             <div class="form-group row">
               <div class="col-md-12">
-                <label for="{{ form.password2.id_for_label }}" class="text-black">Confirm Password
+                <label for="{{ user_form.password2.id_for_label }}" class="text-black">Confirm Password
                 </label>
-                <input class="form-control" id="{{ form.password2.id_for_label }}" name="{{ form.password2.html_name }}"
+                <input class="form-control" id="{{ user_form.password2.id_for_label }}" name="{{ user_form.password2.html_name }}"
                 type="password" />
-                <span class="text-danger">{{ form.password2.errors }}</span>
+                <span class="text-danger">{{ user_form.password2.errors }}</span>
               </div>
             </div>
             <div class="form-group">
-              <label for="{{ form.country.id_for_label }}" class="text-black">Country <span
+              <label for="{{ profile_form.country.id_for_label }}" class="text-black">Country <span
                 class="text-danger">*</span></label>
                 {% get_countries as countries %}
-                <select class="form-control" id="{{ form.country.id_for_label }}" name="{{ form.country.html_name }}">
-                    <option value>Select a Country</option>
+                <select class="form-control" id="{{ profile_form.country.id_for_label }}" name="{{ profile_form.country.html_name }}">
+                  <option value>Select a Country</option>
                   {% for country in countries %}
-                  <option value="{{ country.code }}">{{ country.name }}</option>
+                    {% ifequal profile_form.country.value country.code %}
+                      <option value="{{ country.code }}" selected>{{ country.name }}</option>
+                    {% else %}
+                      <option value="{{ country.code }}" >{{ country.name }} </option>
+                    {% endifequal %}
                   {% endfor %}
                 </select>
                 <span
-                <span class="text-danger">{{ form.country.errors }}</span>
+                <span class="text-danger">{{ profile_form.country.errors }}</span>
             </div>
 
             <div class="form-group row">
               <div class="col-md-6">
-                <label for="{{ form.first_name.id_for_label }}" class="text-black">First Name <span
+                <label for="{{ profile_form.first_name.id_for_label }}" class="text-black">First Name <span
                   class="text-danger">*</span></label>
-                  <input type="text" class="form-control" id="{{ form.first_name.id_for_label }}"
-                  name="{{ form.first_name.html_name }}">
-                  <span class="text-danger">{{ form.first_name.errors }}</span>
+                  <input type="text" class="form-control" id="{{ profile_form.first_name.id_for_label }}"
+                  name="{{ profile_form.first_name.html_name }}" value="{{profile_form.first_name.value|default_if_none:""}}">
+                  <span class="text-danger">{{ profile_form.first_name.errors }}</span>
               </div>
               <div class="col-md-6">
-                <label for="{{ form.last_name.id_for_label }}" class="text-black">Last Name <span
+                <label for="{{ profile_form.last_name.id_for_label }}" class="text-black">Last Name <span
                   class="text-danger">*</span></label>
-                  <input type="text" class="form-control" id="{{ form.last_name.id_for_label }}"
-                  name="{{ form.last_name.html_name }}">
-                  <span class="text-danger">{{ form.last_name.errors }}</span>
+                  <input type="text" class="form-control" id="{{ profile_form.last_name.id_for_label }}"
+                  name="{{ profile_form.last_name.html_name }}" value="{{profile_form.last_name.value|default_if_none:""}}">
+                  <span class="text-danger">{{ profile_form.last_name.errors }}</span>
               </div>
             </div>
 
 
             <div class="form-group row">
               <div class="col-md-12">
-                <label for="{{ form.company.id_for_label }}" class="text-black">Company Name </label>
-                <input type="text" class="form-control" id="{{ form.company.id_for_label }}"
-                name="{{ form.company.html_name }}">
-                <span class="text-danger">{{ form.company.errors }}</span>
+                <label for="{{ profile_form.company.id_for_label }}" class="text-black">Company Name </label>
+                <input type="text" class="form-control" id="{{ profile_form.company.id_for_label }}"
+                name="{{ profile_form.company.html_name }}" value="{{profile_form.company.value|default_if_none:""}}">
+                <span class="text-danger">{{ profile_form.company.errors }}</span>
               </div>
             </div>
 
             <div class="form-group row">
               <div class="col-md-12">
-                <label for="{{ form.address_line_one.id_for_label }}" class="text-black">Address <span
+                <label for="{{ profile_form.address_line_one.id_for_label }}" class="text-black">Address <span
                   class="text-danger">*</span></label>
-                  <input type="text" class="form-control" id="{{ form.address_line_one.id_for_label }}"
-                  name="{{ form.address_line_one.html_name }}" placeholder="Street address">
-                  <span class="text-danger">{{ form.address_line_one.errors }}</span>
+                  <input type="text" class="form-control" id="{{ profile_form.address_line_one.id_for_label }}"
+                  name="{{ profile_form.address_line_one.html_name }}" placeholder="Street address" value="{{profile_form.address_line_one.value|default_if_none:""}}">
+                  <span class="text-danger">{{ profile_form.address_line_one.errors }}</span>
               </div>
             </div>
 
             <div class="form-group">
-              <input type="text" class="form-control" name="{{ form.address_line_two.html_name }}"
-              placeholder="Apartment, suite, unit etc. (optional)">
-              <span class="text-danger">{{ form.address_line_two.errors }}</span>
+              <input type="text" class="form-control" name="{{ profile_form.address_line_two.html_name }}"
+              placeholder="Apartment, suite, unit etc. (optional)" value="{{profile_form.address_line_two.value|default_if_none:""}}">
+              <span class="text-danger">{{ profile_form.address_line_two.errors }}</span>
             </div>
 
             <div class="form-group row">
               <div class="col-md-6">
-                <label for="{{ form.email.id_for_label }}" class="text-black">Email Address <span
+                <label for="{{ user_form.email.id_for_label }}" class="text-black">Email Address <span
                   class="text-danger">*</span></label>
-                  <input type="text" class="form-control" id="{{ form.email.id_for_label }}"
-                  name="{{ form.email.html_name }}">
-                  <span class="text-danger">{{ form.email.errors }}</span>
+                  <input type="text" class="form-control" id="{{ user_form.email.id_for_label }}"
+                  name="{{ user_form.email.html_name }}" value="{{user_form.email.value|default_if_none:""}}">
+                  <span class="text-danger">{{ user_form.email.errors }}</span>
               </div>
               <div class="col-md-6">
-                <label for="{{ form.phone.id_for_label }}" class="text-black">Phone <span
+                <label for="{{ profile_form.phone.id_for_label }}" class="text-black">Phone <span
                   class="text-danger">*</span></label>
-                  <input type="text" class="form-control" id="{{ form.phone.id_for_label }}"
-                  name="{{ form.phone.html_name }}" placeholder="Phone Number">
-                  <span class="text-danger">{{ form.phone.errors }}</span>
+                  <input type="text" class="form-control" id="{{ profile_form.phone.id_for_label }}"
+                  name="{{ profile_form.phone.html_name }}" placeholder="Phone Number" value="{{profile_form.phone.value|default_if_none:""}}">
+                  <span class="text-danger">{{ profile_form.phone.errors }}</span>
               </div>
             </div>
 

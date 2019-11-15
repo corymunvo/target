@@ -2,28 +2,31 @@ from django import forms
 from django.forms import ModelForm
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
-from django_countries.fields import CountryField
-from django_countries.widgets import CountrySelectWidget
 from phonenumber_field.formfields import PhoneNumberField
 
-from .models import Cart
+from .models import Cart, Profile
 
+class UserCreationForm(UserCreationForm):
+    email = forms.EmailField(required=True)
 
-class SignUpForm(UserCreationForm):
-    first_name  = forms.CharField(label='First Name', max_length=100)
-    last_name  = forms.CharField(label='Last Name', max_length=100)
-    company  = forms.CharField(label='Company', max_length=100)
-    address_line_one  = forms.CharField(label='Adress', max_length=200)
-    address_line_two  = forms.CharField(max_length=200)
-    phone  = PhoneNumberField()
-    country  = CountryField(blank_label='(Select country)').formfield()
-    
     class Meta:
         model = User
-        fields = ('username', 'email', 'password1', 'password2', 'first_name', 'last_name', 'company', 'address_line_one', 'address_line_two', 'phone', 'country' )
-        widgets = {'country': CountrySelectWidget()}
+        fields = ("username", "email", "password1", "password2")
 
-  
+    def save(self, commit=True):
+        user = super(UserCreationForm, self).save(commit=False)
+        user.email = self.cleaned_data["email"]
+        if commit:
+            user.save()
+        return user
+
+
+class ProfileForm(forms.ModelForm):
+    class Meta:
+        model = Profile
+        fields = ('first_name', 'last_name', 'company', 'address_line_one', 'address_line_two', 'phone', 'country')
+
+
 class CartForm(ModelForm):
     class Meta:
         model = Cart
