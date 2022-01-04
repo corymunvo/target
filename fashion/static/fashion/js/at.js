@@ -1,6 +1,5 @@
 
-window.targetGlobalSettings.cookieDomain = 
-window.location.hostname;
+window.targetGlobalSettings.cookieDomain = window.location.hostname;
 /**
  * @license
  * at.js 2.7.0 | (c) Adobe Systems Incorporated | All rights reserved
