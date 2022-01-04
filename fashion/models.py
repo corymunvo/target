@@ -9,6 +9,7 @@ from django.conf import settings
 
 
 class Product(models.Model):
+    id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=200)
     category = models.CharField(max_length=200)
     message = models.TextField(max_length=400)
@@ -24,6 +25,7 @@ class Product(models.Model):
 
 
 class Profile(models.Model):
+    id = models.AutoField(primary_key=True)
     user = models.OneToOneField(  settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     first_name = models.TextField(max_length=40, blank=True)
     last_name = models.TextField(max_length=40, blank=True)
@@ -35,6 +37,7 @@ class Profile(models.Model):
 
 
 class Cart(models.Model):
+    id = models.AutoField(primary_key=True)
     quantity =  models.IntegerField(default=0)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
