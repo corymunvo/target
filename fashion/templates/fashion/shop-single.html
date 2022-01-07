@@ -22,9 +22,9 @@
         </div>
       </div>
 
-        <div class="col-md-6">
-            <form method="post" action="{% url 'cart' %}">
-                {% csrf_token %}
+      <div class="col-md-6">
+        <form method="post" action="{% url 'cart' %}">
+          {% csrf_token %}
           <h2 class="text-black">{{product.name}}</h2>
           <div class="spaced">{{product.message|linebreaks}}</div>
           <p><strong class="text-primary h4">${{product.price}}</strong></p>
@@ -51,21 +51,22 @@
               <div class="input-group-prepend">
                 <button id="js-btn-minus" class="btn btn-outline-primary js-btn-minus" type="button">&minus;</button>
               </div>
-    
+
               <input name="{{ form.quantity.html_name }}" type="text" class="form-control text-center" value="1"
-                placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" min="1" max="100">
+                placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" min="1"
+                max="100">
               <div class="input-group-append">
                 <button id="js-btn-plus" class="btn btn-outline-primary js-btn-plus" type="button">&plus;</button>
               </div>
             </div>
 
           </div>
-          <input type="hidden" name="{{ form.product.html_name }}"" value="{{product.id}}">
+          <input type="hidden" name="{{ form.product.html_name }}"" value=" {{product.id}}">
 
           <p><button type="submit" class="buy-now btn btn-sm height-auto px-4 py-3 btn-primary">Add To Cart</button></p>
         </form>
 
-        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -77,8 +78,13 @@
         <h2>Popular Products</h2>
       </div>
     </div>
-    <div class="popular-products"></div>
+      <div class="row">
+        <div class="col-md-12 block-3">
+          <div class="nonloop-block-3 owl-carousel">
+            <div class="popular-products-items" id="popular-products-items"></div>
+          </div>
+        </div>
+    </div>
   </div>
-</div>
 
-{% endblock %}
+  {% endblock %}
