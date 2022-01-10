@@ -37,9 +37,13 @@ jQuery(document).ready(function($) {
 
 	adobe.target.getOffer({     
 		"mbox": "target-global-mbox",   
-		"success": function(offer) { 
+		"success": function(offers) { 
 			console.log("Offers below")
-			console.log(offer);
+			console.log(offers);
+			adobe.target.applyOffer( {  
+				"mbox": "target-global-mbox", 
+				"offer": offers  
+			 }); 
 			slider();
 		}, 
 		"error": function(status, error) {                 
