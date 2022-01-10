@@ -35,28 +35,30 @@ jQuery(document).ready(function($) {
 	};
 
 
-	adobe.target.getOffers({...})
-	.then(response => adobe.target.applyOffers({ response: response }))
-	.then(() => slider())
-	.then(() => console.log("Success"))
-	.catch(error => console.log("Error", error));
+	// adobe.target.getOffer({
+	// 	"mbox": "target-global-mbox", 
+	// }).then(response => adobe.target.applyOffer({ response: response }))
+	// .then(() => slider())
+	// .then(() => console.log("Success"))
+	// .catch(error => console.log("Error", error));
 
-	// adobe.target.getOffer({     
-	// 	"mbox": "target-global-mbox",   
-	// 	"success": function(offers) { 
-	// 		console.log("Offers below")
-	// 		console.log(offers);
-	// 		adobe.target.applyOffer( {  
-	// 			"mbox": "target-global-mbox", 
-	// 			"offer": offers  
-	// 		 }); 
-	// 		slider();
-	// 	}, 
-	// 	"error": function(status, error) {                 
-	// 	  console.log('Error', status, error);   
-	// 	},   
-	// 	"timeout": 2000 
-	//   });
+	adobe.target.getOffer({     
+		"mbox": "target-global-mbox",   
+		"success": function(offer) { 
+			console.log("Offers below")
+			console.log(offer);
+			adobe.target.applyOffer( {  
+				"mbox": "target-global-mbox", 
+				"offer": offer 
+			 })
+			 
+			 slider()
+		}, 
+		"error": function(status, error) {                 
+		  console.log('Error', status, error);   
+		},   
+		"timeout": 2000 
+	  });
 
 	
 
