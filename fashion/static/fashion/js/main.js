@@ -34,14 +34,29 @@ jQuery(document).ready(function($) {
 		});
 	};
 
+	var removeEmptySlides = function() {
+	// 	<div class="item">
+	// 	<div class="item-entry">
+	// 	  <a href="{% url 'shop'%}" class="product-item md-height bg-gray d-block">
+	// 		<img src="{% static "fashion/images/shoe_2.png" %}" alt="Image" class="img-fluid">
+	// 	  </a>
+	// 	  <h2 class="item-title"><a href="{% url 'shop'%}">Blue Shoe High Heels</a></h2>
+	// 	  <strong class="item-price"><del>$46.00</del> $28.00</strong>
 
-	// adobe.target.getOffer({
-	// 	"mbox": "target-global-mbox", 
-	// }).then(response => adobe.target.applyOffer({ response: response }))
-	// .then(() => slider())
-	// .then(() => console.log("Success"))
-	// .catch(error => console.log("Error", error));
+	// 	  <div class="star-rating">
+	// 		<span class="icon-star2 text-warning"></span>
+	// 		<span class="icon-star2 text-warning"></span>
+	// 		<span class="icon-star2 text-warning"></span>
+	// 		<span class="icon-star2 text-warning"></span>
+	// 		<span class="icon-star2 text-warning"></span>
+	// 	  </div>
+	// 	</div>
+	//   </div>
+		var items = $(".item").filter(function(){return this.find('a').attr('href') == ''});
+		items.hide();
 
+		
+	}
 	adobe.target.getOffer({     
 		"mbox": "target-global-mbox",   
 		"success": function(offer) { 
@@ -52,6 +67,7 @@ jQuery(document).ready(function($) {
 				"offer": offer 
 			 })
 			 
+			 removeEmptySlides();
 			 slider()
 		}, 
 		"error": function(status, error) {                 
