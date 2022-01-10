@@ -35,37 +35,16 @@ jQuery(document).ready(function ($) {
 	};
 
 	var removeEmptySlides = function () {
-		// 	<div class="item">
-		// 	<div class="item-entry">
-		// 	  <a href="{% url 'shop'%}" class="product-item md-height bg-gray d-block">
-		// 		<img src="{% static "fashion/images/shoe_2.png" %}" alt="Image" class="img-fluid">
-		// 	  </a>
-		// 	  <h2 class="item-title"><a href="{% url 'shop'%}">Blue Shoe High Heels</a></h2>
-		// 	  <strong class="item-price"><del>$46.00</del> $28.00</strong>
-
-		// 	  <div class="star-rating">
-		// 		<span class="icon-star2 text-warning"></span>
-		// 		<span class="icon-star2 text-warning"></span>
-		// 		<span class="icon-star2 text-warning"></span>
-		// 		<span class="icon-star2 text-warning"></span>
-		// 		<span class="icon-star2 text-warning"></span>
-		// 	  </div>
-		// 	</div>
-		//   </div>
-
-		var targetElements = $('div[id^="target-"]');
+		var targetElements = $('#target-offer-response');
 		var carousels = targetElements.find('.owl-carousel');
-		var items = carousels.find(".items");
-		var filteredItems = items.filter(function () { return this.find('img').attr('src') == '' });
-		console.log("filtered Items", filteredItems);
-		filteredItems.hide();
+		var items = carousels.find(".item");
+		var filteredItems = items.filter(function () { return $( this ).find('img').attr('src') == '' });
+		filteredItems.remove();
 	}
 
 	adobe.target.getOffer({
 		"mbox": "target-global-mbox",
 		"success": function (offer) {
-			console.log("Offers below")
-			console.log(offer);
 			adobe.target.applyOffer({
 				"mbox": "target-global-mbox",
 				"offer": offer
