@@ -33,7 +33,22 @@ jQuery(document).ready(function($) {
 	    }
 		});
 	};
-	slider();
+
+
+	adobe.target.getOffer({     
+		"mbox": "target-global-mbox",   
+		"success": function(offer) { 
+			console.log("Offers below")
+			console.log(offer);
+			slider();
+		}, 
+		"error": function(status, error) {                 
+		  console.log('Error', status, error);   
+		},   
+		"timeout": 2000 
+	  });
+
+	
 
 
 	var siteMenuClone = function() {
